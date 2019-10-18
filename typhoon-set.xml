@@ -228,6 +228,7 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
 			<file>Aircraft/eurofighter/Nasal/mfd1.nas</file>
 			<file>Aircraft/eurofighter/Nasal/SAS.nas</file>
 			<file>Aircraft/eurofighter/Nasal/xponder.nas</file>
+            <file>Aircraft/eurofighter/Nasal/autopilot-wp.nas</file>
 			<script>
 				if (getprop("/sim/rendering/rembrandt/enabled")) {
 				setprop("sim/model/typhoon/shadow",0);
