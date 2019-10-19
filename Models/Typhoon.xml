@@ -79,7 +79,7 @@
 		<type>select</type>
 		<condition>
 			<not>
-				<property>/sim/rendering/rembrandt/enabled</property>
+				<property>sim/rendering/rembrandt/enabled</property>
 			</not>
 		</condition>
 		<object-name>canopyglass</object-name>
@@ -173,7 +173,7 @@
 		<object-name>airint.R</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/hydraulics/circuit1_press</property>
+				<property>systems/hydraulics/circuit1_press</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -195,7 +195,7 @@
 		<object-name>airint.L</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/hydraulics/circuit1_press</property>
+				<property>systems/hydraulics/circuit1_press</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -448,7 +448,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Gear.nose</object-name>
-		<property>/gear/gear[0]/caster-angle-deg</property>
+		<property>gear/gear[0]/caster-angle-deg</property>
 		<factor>-1</factor>
 		<center>
 			<x-m>5.591</x-m>
@@ -1348,7 +1348,7 @@
 		<object-name>speedbrake2</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/hydraulics/circuit2_press</property>
+				<property>systems/hydraulics/circuit2_press</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -1372,7 +1372,7 @@
 		<object-name>SpeedBrakeActuator</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/hydraulics/circuit2_press</property>
+				<property>systems/hydraulics/circuit2_press</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -1394,7 +1394,7 @@
 		<object-name>SpeedBrakeBase</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/hydraulics/circuit2_press</property>
+				<property>systems/hydraulics/circuit2_press</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -1416,7 +1416,7 @@
 		<object-name>SpeedBrakeRam</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/hydraulics/circuit2_press</property>
+				<property>systems/hydraulics/circuit2_press</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -1438,7 +1438,7 @@
 		<object-name>SpeedBrakeRam</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/hydraulics/circuit2_press</property>
+				<property>systems/hydraulics/circuit2_press</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -1481,7 +1481,7 @@
 		<object-name>canopyframe</object-name>
 		<object-name>canopyframe.inside</object-name>
 		<object-name>CanopyMirrors</object-name>
-		<property>/controls/canopy/position-norm</property>
+		<property>canopy/position-norm</property>
 		<factor>35</factor>
 		<center>
 			<x-m>6.04</x-m>
@@ -1497,21 +1497,27 @@
     
     <!-- Stairs -->
  
- <model>
-   <name>stairs</name>
-   <path>Aircraft/eurofighter/Models/stairs/EF-stairs.ac</path>
-   <condition>
-     <greater-than>
-       <property>/controls/canopy/position-norm</property>
-       <value>0.5</value>
-     </greater-than>
-   </condition>
-   <offsets>
-     <x-m>-0.5</x-m>
-     <y-m>0</y-m>
-     <z-m>0</z-m>
-   </offsets>   
- </model>
+    <model>
+        <name>stairs</name>
+        <path>Aircraft/eurofighter/Models/stairs/EF-stairs.ac</path>
+        <condition>
+            <and>
+                <greater-than>
+                    <property>canopy/position-norm</property>
+                    <value>0.5</value>
+                </greater-than>
+                <equals>
+                    <property>sim/multiplay/generic/int[18]</property>
+                    <value>1</value>
+                </equals>                
+            </and>
+        </condition>
+        <offsets>
+            <x-m>-0.5</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </offsets>   
+    </model>
 
 <!-- ******************************************************************* -->
 <!-- Refuelling probe                                                    -->
@@ -1683,11 +1689,11 @@
 				<and>
 					<property>sim/model/livery/beacon</property>
 					<equals>
-						<property>/sim/multiplay/generic/float[4]</property>
+						<property>sim/multiplay/generic/float[4]</property>
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/controls/switches/beacons</property>
+						<property>controls/switches/beacons</property>
 						<value>true</value>
 					</equals>
 					<property>controls/lighting/beacon</property>
@@ -1705,18 +1711,18 @@
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>/controls/switches/strobe-lights</property>
+					<property>controls/switches/strobe-lights</property>
 					<value>true</value>
 				</equals>
 				<and>
-					<property>/sim/model/livery/strobe</property>
-					<property>/sim/model/lights/strobe-lower/state</property>
+					<property>sim/model/livery/strobe</property>
+					<property>sim/model/lights/strobe-lower/state</property>
 					<greater-than>
-						<property>/sim/multiplay/generic/float[5]</property>
+						<property>sim/multiplay/generic/float[5]</property>
 						<value>27</value>
 					</greater-than>
 					<greater-than>
-						<property>/systems/electrical/outputs/external-lights/strobe-lights</property>
+						<property>systems/electrical/outputs/external-lights/strobe-lights</property>
 						<value>27</value>
 					</greater-than>
 				</and>
@@ -1735,14 +1741,14 @@
 					<value>0</value>
 				</equals>
 				<equals>
-					<property>/controls/switches/beacons</property>
+					<property>controls/switches/beacons</property>
 					<value>true</value>
 				</equals>
 				<property>controls/lighting/beacon</property>
 				<and>
 					<property>sim/model/livery/beacon</property>
 					<equals>
-						<property>/sim/multiplay/generic/float[4]</property>
+						<property>sim/multiplay/generic/float[4]</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -1762,7 +1768,7 @@
 				<and>
 					<property>sim/model/livery/strobe</property>
 					<equals>
-						<property>/sim/multiplay/generic/float[5]</property>
+						<property>sim/multiplay/generic/float[5]</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -1780,7 +1786,7 @@
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>/controls/switches/beacons</property>
+					<property>controls/switches/beacons</property>
 					<value>true</value>
 				</equals>
 				<equals>
@@ -1800,7 +1806,7 @@
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>/controls/switches/beacons</property>
+					<property>controls/switches/beacons</property>
 					<value>true</value>
 				</equals>
 				<equals>
@@ -1826,12 +1832,12 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/controls/switches/strobe-lights</property>
+					<property>controls/switches/strobe-lights</property>
 					<value>true</value>
 				</equals>
-				<property>/sim/model/livery/strobe</property>
+				<property>sim/model/livery/strobe</property>
 				<greater-than>
-					<property>/sim/multiplay/generic/float[5]</property>
+					<property>sim/multiplay/generic/float[5]</property>
 					<value>27</value>
 				</greater-than>
 			</and>
@@ -1841,10 +1847,10 @@
 		<type>select</type>
 		<object-name>beacon.up</object-name>
 		<condition>
-			<property>/sim/multiplay/generic/float[4]</property>
+			<property>sim/multiplay/generic/float[4]</property>
 			<property>sim/model/livery/beacon</property>
 			<greater-than>
-				<property>/systems/electrical/outputs/external-lights/beacons</property>
+				<property>systems/electrical/outputs/external-lights/beacons</property>
 				<value>27</value>
 			</greater-than>
 			<property>controls/lighting/beacon</property>
@@ -1855,15 +1861,15 @@
 		<object-name>strobe.up</object-name>
 		<condition>
 			<and>
-				<property>/sim/multiplay/generic/float[5]</property>
+				<property>sim/multiplay/generic/float[5]</property>
 				<property>sim/model/livery/strobe</property>
-				<property>/sim/model/lights/strobe-upper/state</property>
+				<property>sim/model/lights/strobe-upper/state</property>
 				<greater-than>
-					<property>/systems/electrical/outputs/external-lights/strobe-lights</property>
+					<property>systems/electrical/outputs/external-lights/strobe-lights</property>
 					<value>27</value>
 				</greater-than>
 				<equals>
-					<property>/controls/switches/strobe-lights</property>
+					<property>controls/switches/strobe-lights</property>
 					<value>true</value>
 				</equals>
 			</and>
@@ -1874,10 +1880,10 @@
 		<object-name>strobe.up</object-name>
 		<condition>
 			<and>
-				<property>/sim/multiplay/generic/float[5]</property>
+				<property>sim/multiplay/generic/float[5]</property>
 				<property>sim/model/livery/strobe</property>
 				<equals>
-					<property>/controls/switches/strobe-lights</property>
+					<property>controls/switches/strobe-lights</property>
 					<value>true</value>
 				</equals>
 			</and>
@@ -1901,15 +1907,15 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/controls/switches/nav-lights</property>
+					<property>controls/switches/nav-lights</property>
 					<value>2</value>
 				</equals>
 				<greater-than>
-					<property>/systems/electrical/outputs/external-lights/nav-lights</property>
+					<property>systems/electrical/outputs/external-lights/nav-lights</property>
 					<value>27</value>
 				</greater-than>
 				<greater-than>
-					<property>/sim/multiplay/generic/float[7]</property>
+					<property>sim/multiplay/generic/float[7]</property>
 					<value>27</value>
 				</greater-than>
 				<!--greater-than>
@@ -1931,15 +1937,15 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/controls/switches/nav-lights</property>
+					<property>controls/switches/nav-lights</property>
 					<value>1</value>
 				</equals>
 				<greater-than>
-					<property>/sim/multiplay/generic/float[7]</property>
+					<property>sim/multiplay/generic/float[7]</property>
 					<value>27</value>
 				</greater-than>
 				<greater-than>
-					<property>/systems/electrical/outputs/external-lights/nav-lights</property>
+					<property>systems/electrical/outputs/external-lights/nav-lights</property>
 					<value>27</value>
 				</greater-than>
 			</and>
@@ -1956,15 +1962,15 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/controls/switches/nav-lights</property>
+					<property>controls/switches/nav-lights</property>
 					<value>1</value>
 				</equals>
 				<greater-than>
-					<property>/sim/multiplay/generic/float[7]</property>
+					<property>sim/multiplay/generic/float[7]</property>
 					<value>27</value>
 				</greater-than>
 				<greater-than>
-					<property>/systems/electrical/outputs/external-lights/nav-lights</property>
+					<property>systems/electrical/outputs/external-lights/nav-lights</property>
 					<value>27</value>
 				</greater-than>
 			</and>
@@ -1981,15 +1987,15 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/controls/switches/nav-lights</property>
+					<property>controls/switches/nav-lights</property>
 					<value>1</value>
 				</equals>
 				<greater-than>
-					<property>/sim/multiplay/generic/float[7]</property>
+					<property>sim/multiplay/generic/float[7]</property>
 					<value>27</value>
 				</greater-than>
 				<greater-than>
-					<property>/systems/electrical/outputs/external-lights/nav-lights</property>
+					<property>systems/electrical/outputs/external-lights/nav-lights</property>
 					<value>27</value>
 				</greater-than>
 			</and>
@@ -2008,7 +2014,7 @@
 		<object-name>FormLightLens.RR</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/electrical/outputs/external-lights/formation-lights</property>
+				<property>systems/electrical/outputs/external-lights/formation-lights</property>
 				<value>27</value>
 			</greater-than>
 		</condition>
@@ -2052,7 +2058,7 @@
 		<object-name>normal-lights</object-name>
 		<condition>
 			<not>
-				<property>/sim/rendering/rembrandt/enabled</property>
+				<property>sim/rendering/rembrandt/enabled</property>
 			</not>
 		</condition>
 	</animation>
@@ -2096,13 +2102,13 @@
 		<object-name>ConeRight</object-name>
 		<condition>
 			<and>
-				<property>/controls/switches/landing-lights</property>
+				<property>controls/switches/landing-lights</property>
 				<greater-than>
-					<property>/systems/electrical/outputs/external-lights/landing-lights</property>
+					<property>systems/electrical/outputs/external-lights/landing-lights</property>
 					<value>175</value>
 				</greater-than>
 				<greater-than>
-					<property>/sim/multiplay/generic/float[8]</property>
+					<property>sim/multiplay/generic/float[8]</property>
 					<value>175</value>
 				</greater-than>
 				<equals>
@@ -2153,13 +2159,13 @@
 		<object-name>TaxiRight</object-name>
 		<condition>
 			<and>
-				<property>/controls/switches/taxi-lights</property>
+				<property>controls/switches/taxi-lights</property>
 				<greater-than>
-					<property>/systems/electrical/outputs/external-lights/taxi-lights</property>
+					<property>systems/electrical/outputs/external-lights/taxi-lights</property>
 					<value>175</value>
 				</greater-than>
 				<greater-than>
-					<property>/sim/multiplay/generic/float[19]</property>
+					<property>sim/multiplay/generic/float[19]</property>
 					<value>175</value>
 				</greater-than>
 				<equals>

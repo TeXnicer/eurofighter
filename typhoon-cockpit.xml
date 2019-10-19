@@ -179,7 +179,6 @@
 		</tailhook>
 		<canopy>
 			<open type="bool">1</open>
-			<position-norm type="double">1</position-norm>
 		</canopy> 
 		<!--SAS>
 			<pitch type="bool">true</pitch>

@@ -68,7 +68,7 @@
 			<binding>
 				<condition>
 					<equals>
-						<property>controls/canopy/position-norm</property>
+						<property>canopy/position-norm</property>
 						<value>0</value>
 					</equals>
 				</condition>

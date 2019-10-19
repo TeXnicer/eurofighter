@@ -18,10 +18,10 @@
 			<path>Aircraft/eurofighter/Sounds/Samples/engine-intake.wav</path>
 			<condition>
 				<not>
-					<property>/sim/current-view/internal</property>
+					<property>sim/current-view/internal</property>
 				</not>
 				<equals>
-					<property>/controls/switches/lp-cock-left</property>
+					<property>controls/switches/lp-cock-left</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -58,10 +58,10 @@
 			<path>Aircraft/eurofighter/Sounds/Samples/engine-intake.wav</path>
 			<condition>
 				<not>
-					<property>/sim/current-view/internal</property>
+					<property>sim/current-view/internal</property>
 				</not>
 				<equals>
-					<property>/controls/switches/lp-cock-right</property>
+					<property>controls/switches/lp-cock-right</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -99,11 +99,11 @@
 			<path>Aircraft/eurofighter/Sounds/Samples/engine-exhaust.wav</path>
 			<condition>
 				<not>
-					<property>/sim/current-view/internal</property>
+					<property>sim/current-view/internal</property>
 				</not>
 				<and>
 					<equals>
-						<property>/controls/switches/lp-cock-left</property>
+						<property>controls/switches/lp-cock-left</property>
 						<value>1</value>
 					</equals>
 					<greater-than>
@@ -145,11 +145,11 @@
 			<path>Aircraft/eurofighter/Sounds/Samples/engine-exhaust.wav</path>
 			<condition>
 				<not>
-					<property>/sim/current-view/internal</property>
+					<property>sim/current-view/internal</property>
 				</not>
 				<and>
 					<equals>
-						<property>/controls/switches/lp-cock-right</property>
+						<property>controls/switches/lp-cock-right</property>
 						<value>1</value>
 					</equals>
 					<greater-than>
@@ -192,12 +192,12 @@
 			<path>Aircraft/eurofighter/Sounds/Samples/engine-lowfreq.wav</path>
 			<condition>
 				<and>
-					<property>/engines/engine[0]/running</property>
+					<property>engines/engine[0]/running</property>
 					<not>
-						<property>/sim/current-view/internal</property>
+						<property>sim/current-view/internal</property>
 					</not>
 					<equals>
-						<property>/controls/switches/lp-cock-left</property>
+						<property>controls/switches/lp-cock-left</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -229,12 +229,12 @@
 			<path>Aircraft/eurofighter/Sounds/Samples/engine-lowfreq.wav</path>
 			<condition>
 				<and>
-					<property>/engines/engine[1]/running</property>
+					<property>engines/engine[1]/running</property>
 					<not>
-						<property>/sim/current-view/internal</property>
+						<property>sim/current-view/internal</property>
 					</not>
 					<equals>
-						<property>/controls/switches/lp-cock-right</property>
+						<property>controls/switches/lp-cock-right</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -268,7 +268,7 @@
 			<path>Aircraft/eurofighter/Sounds/Samples/apu.wav</path>
 			<condition>
 				<not>
-					<property>/sim/current-view/internal</property>
+					<property>sim/current-view/internal</property>
 				</not>
 			</condition>
 			<position>
@@ -285,14 +285,14 @@
 				<outer-gain>0.4</outer-gain>
 			</orientation>
 			<volume>
-				<property>/engines/engine[2]/rpm</property>
+				<property>engines/engine[2]/rpm</property>
 				<factor>0.01</factor>
 				<offset>-0.06</offset>
 				<min>0.0</min>
 				<max>0.4</max>
 			</volume>
 			<pitch>
-				<property>/engines/engine[2]/rpm</property>
+				<property>engines/engine[2]/rpm</property>
 				<factor>0.01</factor>
 				<min>0.0</min>
 				<max>10.0</max>
@@ -307,11 +307,11 @@
 				<and>
 				<property>engines/engine[0]/reheat</property>
 					<not>
-						<property>/sim/current-view/internal</property>
-						<property>/engines/engine[0]/out-of-fuel</property>
+						<property>sim/current-view/internal</property>
+						<property>engines/engine[0]/out-of-fuel</property>
 					</not>
 					<equals>
-						<property>/controls/switches/lp-cock-left</property>
+						<property>controls/switches/lp-cock-left</property>
 						<value>1</value>
 					</equals>
 					<greater-than>
@@ -351,11 +351,11 @@
 				<and>
 				<property>engines/engine[1]/reheat</property>
 				<not>
-					<property>/sim/current-view/internal</property>
-					<property>/engines/engine[1]/out-of-fuel</property>
+					<property>sim/current-view/internal</property>
+					<property>engines/engine[1]/out-of-fuel</property>
 				</not>
 				<equals>
-					<property>/controls/switches/lp-cock-right</property>
+					<property>controls/switches/lp-cock-right</property>
 					<value>1</value>
 				</equals>
 				<greater-than>
@@ -394,10 +394,10 @@
 			<mode>looped</mode>
 			<path>Aircraft/eurofighter/Sounds/Samples/cockpit.wav</path>
 			<condition>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 			</condition>
 			<volume>
-				<property>/systems/electrical/outputs/avionics/fan</property>
+				<property>systems/electrical/outputs/avionics/fan</property>
 				<factor>0.025</factor>
 				<min>0</min>
 				<max>0.2</max>
@@ -408,12 +408,12 @@
 			<mode>looped</mode>
 			<path>Aircraft/eurofighter/Sounds/Samples/eng-inside.wav</path>
 			<condition>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<not>
-					<property>/engines/engine[0]/out-of-fuel</property>
+					<property>engines/engine[0]/out-of-fuel</property>
 				</not>
 				<equals>
-					<property>/controls/switches/lp-cock-left</property>
+					<property>controls/switches/lp-cock-left</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -429,12 +429,12 @@
 			<mode>looped</mode>
 			<path>Aircraft/eurofighter/Sounds/Samples/eng-inside.wav</path>
 			<condition>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<not>
-					<property>/engines/engine[1]/out-of-fuel</property>
+					<property>engines/engine[1]/out-of-fuel</property>
 				</not>
 				<equals>
-					<property>/controls/switches/lp-cock-right</property>
+					<property>controls/switches/lp-cock-right</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -451,7 +451,7 @@
 			<mode>looped</mode>
 			<path>Aircraft/eurofighter/Sounds/Samples/apu.wav</path>
 			<condition>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 			</condition>
 			<position>
 				<x>7.0</x>
@@ -467,20 +467,20 @@
 				<outer-gain>0.4</outer-gain>
 			</orientation>
 			<volume>
-				<property>/controls/canopy/position-norm</property>
+				<property>canopy/position-norm</property>
 				<factor>5.0</factor>
 				<min>0.0</min>
 				<max>1.0</max>
 			</volume>
 			<volume>
-				<property>/engines/engine[2]/rpm</property>
+				<property>engines/engine[2]/rpm</property>
 				<factor>0.01</factor>
 				<offset>-0.06</offset>
 				<min>0.0</min>
 				<max>0.4</max>
 			</volume>
 			<pitch>
-				<property>/engines/engine[2]/rpm</property>
+				<property>engines/engine[2]/rpm</property>
 				<factor>0.01</factor>
 				<min>0.0</min>
 				<max>10.0</max>
@@ -492,9 +492,9 @@
 			<mode>looped</mode>
 			<path>Aircraft/eurofighter/Sounds/Samples/engine-intake.wav</path>
 			<condition>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/controls/switches/lp-cock-left</property>
+					<property>controls/switches/lp-cock-left</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -512,7 +512,7 @@
 				<outer-gain>0.4</outer-gain>
 			</orientation>
 			<volume>
-				<property>/controls/canopy/position-norm</property>
+				<property>canopy/position-norm</property>
 				<factor>5.0</factor>
 				<min>0.0</min>
 				<max>1.0</max>
@@ -536,9 +536,9 @@
 			<mode>looped</mode>
 			<path>Aircraft/eurofighter/Sounds/Samples/engine-intake.wav</path>
 			<condition>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/controls/switches/lp-cock-right</property>
+					<property>controls/switches/lp-cock-right</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -556,7 +556,7 @@
 				<outer-gain>0.4</outer-gain>
 			</orientation>
 			<volume>
-				<property>/controls/canopy/position-norm</property>
+				<property>canopy/position-norm</property>
 				<factor>5.0</factor>
 				<min>0.0</min>
 				<max>1.0</max>
@@ -581,9 +581,9 @@
 			<mode>looped</mode>
 			<path>Aircraft/eurofighter/Sounds/Samples/engine-exhaust.wav</path>
 			<condition>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/controls/switches/lp-cock-left</property>
+					<property>controls/switches/lp-cock-left</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -601,7 +601,7 @@
 				<outer-gain>0.5</outer-gain>
 			</orientation>
 			<volume>
-				<property>/controls/canopy/position-norm</property>
+				<property>canopy/position-norm</property>
 				<factor>5.0</factor>
 				<min>0.0</min>
 				<max>1.0</max>
@@ -625,9 +625,9 @@
 			<mode>looped</mode>
 			<path>Aircraft/eurofighter/Sounds/Samples/engine-exhaust.wav</path>
 			<condition>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/controls/switches/lp-cock-right</property>
+					<property>controls/switches/lp-cock-right</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -645,7 +645,7 @@
 				<outer-gain>0.5</outer-gain>
 			</orientation>
 			<volume>
-				<property>/controls/canopy/position-norm</property>
+				<property>canopy/position-norm</property>
 				<factor>5.0</factor>
 				<min>0.0</min>
 				<max>1.0</max>
@@ -669,7 +669,7 @@
 			<name>gear</name>
 			<mode>in-transit</mode>
 			<path>Sounds/gear.wav</path>
-			<property>/gear/gear[0]/position-norm</property>
+			<property>gear/gear[0]/position-norm</property>
 			<pitch>
 				<internal>dt_play</internal>
 				<offset>1.0</offset>
@@ -688,7 +688,7 @@
 			<path>Sounds/gear-lck.wav</path>
 			<condition>
 				<equals>
-					<property>/gear/gear[1]/position-norm</property>
+					<property>gear/gear[1]/position-norm</property>
 					<value>0</value>
 				</equals>
 			</condition>
@@ -710,7 +710,7 @@
 			<path>Sounds/gear-lck.wav</path>
 			<condition>
 				<equals>
-					<property>/gear/gear[1]/position-norm</property>
+					<property>gear/gear[1]/position-norm</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -734,10 +734,10 @@
 			<path>Aircraft/eurofighter/Sounds/Samples/reheat-ignite.wav</path>
 			<condition>
 				<and>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<property>engines/engine[0]/reheat</property>
 				<equals>
-					<property>/controls/switches/lp-cock-left</property>
+					<property>controls/switches/lp-cock-left</property>
 					<value>1</value>
 				</equals>
 				<greater-than>
@@ -756,10 +756,10 @@
 			<path>Aircraft/eurofighter/Sounds/Samples/reheat-ignite.wav</path>
 			<condition>
 				<and>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<property>engines/engine[1]/reheat</property>
 				<equals>
-					<property>/controls/switches/lp-cock-right</property>
+					<property>controls/switches/lp-cock-right</property>
 					<value>1</value>
 				</equals>
 				<greater-than>
@@ -778,25 +778,25 @@
 			<mode>looped</mode>
 			<path>Aircraft/eurofighter/Sounds/Samples/birdsong.wav</path>
 			<condition>
-				<property>/sim/wildlife/birdsong</property>
+				<property>sim/wildlife/birdsong</property>
 				<less-than>
-					<property>/position/altitude-agl-ft</property>
+					<property>position/altitude-agl-ft</property>
 					<value>50</value>
 				</less-than>
 				<less-than>
-					<property>/engines/engine[0]/rpm</property>
+					<property>engines/engine[0]/rpm</property>
 					<value>20</value>
 				</less-than>
 				<less-than>
-					<property>/engines/engine[1]/rpm</property>
+					<property>engines/engine[1]/rpm</property>
 					<value>20</value>
 				</less-than>
 				<not>
-					<property>/sim/current-view/internal</property>
+					<property>sim/current-view/internal</property>
 				</not>
 			</condition>
 			<volume>
-				<property>/sim/wildlife/birdsong-volume</property>
+				<property>sim/wildlife/birdsong-volume</property>
 				<factor>1.0</factor>
 			</volume>
 		</birds>
@@ -805,29 +805,29 @@
 			<mode>looped</mode>
 			<path>Aircraft/eurofighter/Sounds/Samples/birdsong.wav</path>
 			<condition>
-				<property>/sim/wildlife/birdsong</property>
-				<property>/sim/current-view/internal</property>
+				<property>sim/wildlife/birdsong</property>
+				<property>sim/current-view/internal</property>
 				<less-than>
-					<property>/position/altitude-agl-ft</property>
+					<property>position/altitude-agl-ft</property>
 					<value>50</value>
 				</less-than>
 				<less-than>
-					<property>/engines/engine[0]/rpm</property>
+					<property>engines/engine[0]/rpm</property>
 					<value>20</value>
 				</less-than>
 				<less-than>
-					<property>/engines/engine[1]/rpm</property>
+					<property>engines/engine[1]/rpm</property>
 					<value>20</value>
 				</less-than>
 			</condition>
 			<volume>
-				<property>/controls/canopy/position-norm</property>
+				<property>canopy/position-norm</property>
 				<factor>5.0</factor>
 				<min>0.0</min>
 				<max>1.0</max>
 			</volume>
 			<volume>
-				<property>/sim/wildlife/birdsong-volume</property>
+				<property>sim/wildlife/birdsong-volume</property>
 				<factor>1.0</factor>
 			</volume>
 		</birds-internal>
@@ -842,20 +842,20 @@
 				<not>
 					<property>instrumentation/radar/radar-standby</property>
 				</not>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
                 <property>instrumentation/radar/mode/tws-auto</property>
 				<value>1</value>
 				</equals>
 				<equals>
-                <property>/controls/armament/stick-selector</property>
+                <property>controls/armament/stick-selector</property>
 				<value>2</value>
 				</equals>
-                <property>/controls/armament/missile/cont-sound</property>
+                <property>controls/armament/missile/cont-sound</property>
 				</and>
             </condition>
             <volume>
-                <property>/controls/armament/missile/sound-volume</property>
+                <property>controls/armament/missile/sound-volume</property>
 				<factor>0.15</factor>
             </volume>
             <max-dist>5</max-dist>
@@ -870,20 +870,20 @@
 				<not>
 					<property>instrumentation/radar/radar-standby</property>
 				</not>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
                 <property>instrumentation/radar/mode/tws-auto</property>
 				<value>1</value>
 				</equals>
 				<equals>
-                <property>/controls/armament/stick-selector</property>
+                <property>controls/armament/stick-selector</property>
 				<value>2</value>
 				</equals>
-                <property>/controls/armament/missile/int-sound</property>
+                <property>controls/armament/missile/int-sound</property>
 				</and>
             </condition>
             <volume>
-                <property>/controls/armament/missile/sound-volume</property>
+                <property>controls/armament/missile/sound-volume</property>
 				<factor>0.25</factor>
             </volume>
             <max-dist>5</max-dist>
@@ -936,20 +936,20 @@
 			<path>Aircraft/eurofighter/Sounds/Voice/speedlow.wav</path>
 			<type>avionics</type>
 			<condition>
-				<property>/controls/switches/voice</property>
+				<property>controls/switches/voice</property>
 				<not>
 					<or>
-						<property>/gear/gear[1]/wow</property>
-						<property>/gear/gear[2]/wow</property>
+						<property>gear/gear[1]/wow</property>
+						<property>gear/gear[2]/wow</property>
 					</or>
 				</not>
 				<less-than>
-					<property>/velocities/airspeed-kt</property>
+					<property>velocities/airspeed-kt</property>
 					<value>100</value>
 				</less-than>
 			</condition>
 			<volume>
-				<property>/systems/CAMU/voice-alerts/volume</property>
+				<property>systems/CAMU/voice-alerts/volume</property>
 				<factor>0.5</factor>
 			</volume>
 		</voice-speed-low>
@@ -959,18 +959,18 @@
 			<path>Aircraft/eurofighter/Sounds/Voice/landinggear.wav</path>
 			<type>avionics</type>
 			<condition>
-				<property>/controls/switches/voice</property>
-				<property>/systems/warnings/alerts/landing-gear/voice-trigger</property>
-				<not><property>/systems/warnings/alerts/landing-gear/acknowledged</property></not>
+				<property>controls/switches/voice</property>
+				<property>systems/warnings/alerts/landing-gear/voice-trigger</property>
+				<not><property>systems/warnings/alerts/landing-gear/acknowledged</property></not>
 				<not>
 					<or>
-						<property>/gear/gear[1]/wow</property>
-						<property>/gear/gear[2]/wow</property>
+						<property>gear/gear[1]/wow</property>
+						<property>gear/gear[2]/wow</property>
 					</or>
 				</not>
 			</condition>
 			<volume>
-				<property>/systems/CAMU/voice-alerts/volume</property>
+				<property>systems/CAMU/voice-alerts/volume</property>
 				<factor>0.5</factor>
 			</volume>
 		</voice-landing-gear>
@@ -980,12 +980,12 @@
 			<path>Aircraft/eurofighter/Sounds/Voice/gearlimit.wav</path>
 			<type>avionics</type>
 			<condition>
-				<property>/controls/switches/voice</property>
-				<property>/systems/warnings/alerts/gear-limit/voice-trigger</property>
-				<not><property>/systems/warnings/alerts/gear-limit/acknowledged</property></not>
+				<property>controls/switches/voice</property>
+				<property>systems/warnings/alerts/gear-limit/voice-trigger</property>
+				<not><property>systems/warnings/alerts/gear-limit/acknowledged</property></not>
 			</condition>
 			<volume>
-				<property>/systems/CAMU/voice-alerts/volume</property>
+				<property>systems/CAMU/voice-alerts/volume</property>
 				<factor>0.5</factor>
 			</volume>
 		</voice-gear-limit>
@@ -995,19 +995,19 @@
 			<path>Aircraft/eurofighter/Sounds/Voice/lowheight.wav</path>
 			<type>avionics</type>
 			<condition>
-				<property>/sim/current-view/internal</property>
-				<property>/controls/switches/voice</property>
-				<property>/systems/warnings/alerts/low-height/voice-trigger</property>
+				<property>sim/current-view/internal</property>
+				<property>controls/switches/voice</property>
+				<property>systems/warnings/alerts/low-height/voice-trigger</property>
 				<not>
 					<or>
-						<property>/gear/gear[1]/wow</property>
-						<property>/gear/gear[2]/wow</property>
+						<property>gear/gear[1]/wow</property>
+						<property>gear/gear[2]/wow</property>
 					</or>
 				</not>
-				<not><property>/systems/warnings/alerts/low-height/acknowledged</property></not>
+				<not><property>systems/warnings/alerts/low-height/acknowledged</property></not>
 			</condition>
 			<volume>
-				<property>/systems/CAMU/voice-alerts/volume</property>
+				<property>systems/CAMU/voice-alerts/volume</property>
 				<factor>0.5</factor>
 			</volume>
 		</voice-lowheight>
@@ -1017,14 +1017,14 @@
 			<path>Aircraft/eurofighter/Sounds/Voice/frequency.wav</path>
 			<type>avionics</type>
 			<condition>
-				<property>/controls/switches/voice</property>
+				<property>controls/switches/voice</property>
 				<equals>
-					<property>/systems/CAMU/radio[0]/selected-channel-n</property>
-					<property>/systems/CAMU/radio[1]/selected-channel-n</property>
+					<property>systems/CAMU/radio[0]/selected-channel-n</property>
+					<property>systems/CAMU/radio[1]/selected-channel-n</property>
 				</equals>
 			</condition>
 			<volume>
-				<property>/systems/CAMU/voice-alerts/volume</property>
+				<property>systems/CAMU/voice-alerts/volume</property>
 				<factor>0.5</factor>
 			</volume>
 		</voice-frequency>
@@ -1034,20 +1034,20 @@
 			<type>avionics</type>
 			<mode>once</mode>
 			<condition>
-				<property>/controls/switches/voice</property>
+				<property>controls/switches/voice</property>
 				<or>
 					<equals>
-						<property>/consumables/fuel/tank[6]/empty</property>
+						<property>consumables/fuel/tank[6]/empty</property>
 						<value>true</value>
 					</equals>
 					<equals>
-						<property>/consumables/fuel/tank[7]/empty</property>
+						<property>consumables/fuel/tank[7]/empty</property>
 						<value>true</value>
 					</equals>
 				</or>
 			</condition>
 			<volume>
-				<property>/systems/CAMU/voice-alerts/volume</property>
+				<property>systems/CAMU/voice-alerts/volume</property>
 				<factor>0.5</factor>
 			</volume>
 		</voice-wingtanks>
@@ -1057,14 +1057,14 @@
 			<type>avionics</type>
 			<mode>once</mode>
 			<condition>
-				<property>/controls/switches/voice</property>
+				<property>controls/switches/voice</property>
 				<equals>
-					<property>/consumables/fuel/tank[8]/empty</property>
+					<property>consumables/fuel/tank[8]/empty</property>
 					<value>true</value>
 				</equals>
 			</condition>
 			<volume>
-				<property>/systems/CAMU/voice-alerts/volume</property>
+				<property>systems/CAMU/voice-alerts/volume</property>
 				<factor>0.5</factor>
 			</volume>
 		</voice-centretank>
@@ -1074,20 +1074,20 @@
 			<type>avionics</type>
 			<mode>once</mode>
 			<condition>
-				<property>/controls/switches/voice</property>
+				<property>controls/switches/voice</property>
 				<not>
 					<or>
-						<property>/gear/gear[1]/wow</property>
-						<property>/gear/gear[2]/wow</property>
+						<property>gear/gear[1]/wow</property>
+						<property>gear/gear[2]/wow</property>
 					</or>
 				</not>
 				<greater-than>
-					<property>/velocities/mach</property>
+					<property>velocities/mach</property>
 					<value>0.89</value>
 				</greater-than>
 			</condition>
 			<volume>
-				<property>/systems/CAMU/voice-alerts/volume</property>
+				<property>systems/CAMU/voice-alerts/volume</property>
 				<factor>0.5</factor>
 			</volume>
 		</voice-transonic>
@@ -1097,21 +1097,21 @@
 			<type>avionics</type>
 			<mode>looped</mode>
 			<condition>
-				<property>/sim/current-view/internal</property>
-				<property>/controls/switches/voice</property>
+				<property>sim/current-view/internal</property>
+				<property>controls/switches/voice</property>
 				<or>
 					<greater-than>
-						<property>/accelerations/pilot-g</property>
+						<property>accelerations/pilot-g</property>
 						<value>9.5</value>
 					</greater-than>
 					<less-than>
-						<property>/accelerations/pilot-g</property>
+						<property>accelerations/pilot-g</property>
 						<value>-3.0</value>
 					</less-than>
 				</or>
 			</condition>
 			<volume>
-				<property>/systems/CAMU/voice-alerts/volume</property>
+				<property>systems/CAMU/voice-alerts/volume</property>
 				<factor>0.5</factor>
 			</volume>
 		</voice-glimit>
@@ -1121,15 +1121,15 @@
 			<path>Aircraft/eurofighter/Sounds/Voice/fuellow.wav</path>
 			<type>avionics</type>
 			<condition>
-				<property>/sim/current-view/internal</property>
-				<property>/controls/switches/voice</property>
+				<property>sim/current-view/internal</property>
+				<property>controls/switches/voice</property>
 				<less-than>
 					<property>consumables/fuel/total-fuel-lbs</property>
 					<value>700</value>
 				</less-than>
 			</condition>
 			<volume>
-				<property>/systems/CAMU/voice-alerts/volume</property>
+				<property>systems/CAMU/voice-alerts/volume</property>
 				<factor>0.5</factor>
 			</volume>
 		</voice-fuel-low>
@@ -1139,15 +1139,15 @@
 			<path>Aircraft/eurofighter/Sounds/Voice/bingo-fuel.wav</path>
 			<type>avionics</type>
 			<condition>
-				<property>/sim/current-view/internal</property>
-				<property>/controls/switches/voice</property>
+				<property>sim/current-view/internal</property>
+				<property>controls/switches/voice</property>
 				<equals>
-					<property>/controls/fuel/bingo-fuel</property>
+					<property>controls/fuel/bingo-fuel</property>
 					<value>1</value>
 				</equals>
 			</condition>
 			<volume>
-				<property>/systems/CAMU/voice-alerts/volume</property>
+				<property>systems/CAMU/voice-alerts/volume</property>
 				<factor>0.5</factor>
 			</volume>
 		</voice-bingo-fuel>

@@ -82,7 +82,7 @@ setlistener("/controls/engines/engine[1]/reverser", func(n) {
 setlistener("/sim/current-view/view-number", func(n) { setprop("/sim/hud/visibility[1]", n.getValue() == 0) },1);
 
 # command typhoon.canopy.toggle();
-var canopy = aircraft.door.new ("/controls/canopy/", 3);
+var canopy = aircraft.door.new ("/canopy/", 3);
 
 
 aircraft.livery.init("Aircraft/eurofighter/Models2/Liveries");

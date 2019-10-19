@@ -7,7 +7,7 @@
 		<object-name>canopy</object-name>
 		<condition>
 			<greater-than>
-				<property>/controls/canopy/position-norm</property>
+				<property>canopy/position-norm</property>
 				<value>0</value>
 			</greater-than>
 		</condition>

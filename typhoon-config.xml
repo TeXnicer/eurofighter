@@ -36,6 +36,7 @@
 			<int n="9" type="int">0</int>    <!-- contrail -->
             <int n="10" type="int">0</int>   <!-- Smoke wingtip -->
 			<int n="11" type="int">0</int>   <!-- Smoke wingtip --><!-- demo smoke -->
+            <int n="18" alias="/controls/gear/brake-parking" />
 			<int n="19" alias="/systems/weapons/display-smoke" /> <!-- Smokewinders Active -->
 			<int n="20" alias="controls/armament/gun-trigger" /> <!-- Cannon Firing -->
 			<float n="1">0.0</float>

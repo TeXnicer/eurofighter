@@ -2502,7 +2502,7 @@
 				<value type="bool">0</value>
 				</equals>
 				<greater-than>
-				<property>controls/canopy/position-norm</property>
+				<property>canopy/position-norm</property>
 				<value type="int">0</value>
 				</greater-than>
 			</or>
@@ -4037,7 +4037,7 @@
 		<object-name>Ladder.on</object-name>
 		<condition>
 			<greater-than>
-				<property>/controls/canopy/position-norm</property>
+				<property>canopy/position-norm</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>
@@ -4056,7 +4056,7 @@
 			<red>0.8</red>
 			<green>0.2</green>
 			<blue>0.2</blue>
-			<factor-prop>/controls/canopy/position-norm</factor-prop>
+			<factor-prop>canopy/position-norm</factor-prop>
 		</emission>
 	</animation>
 	<animation>
@@ -4064,7 +4064,7 @@
 		<object-name>Ladder_1</object-name>
 		<condition>
 			<equals>
-				<property>controls/canopy/position-norm</property>
+				<property>canopy/position-norm</property>
 				<value>0</value>
 			</equals>
 		</condition>

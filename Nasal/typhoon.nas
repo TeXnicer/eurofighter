@@ -95,12 +95,12 @@ settimer(hudvisible, 1);
 #### Canopy ####
 # command typhoon.canopy.toggle();
 
-var canopy = aircraft.door.new ("/controls/canopy/", 4);
+var canopy = aircraft.door.new ("/canopy/", 4);
 
 ## Usefull for future message warning
 setprop("/controls/canopy/open",0);
 
-setlistener("/controls/canopy/position-norm", func(n) {
+setlistener("/canopy/position-norm", func(n) {
 	setprop("/controls/canopy/open", ( n.getValue() > 0.01 ) );
 },1);
 

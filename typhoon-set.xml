@@ -93,9 +93,9 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
 	<input>
 		<keyboard include="Input/typhoon-keyboard.xml" />
 	</input>
-	<!--canopy>
+	<canopy>
 		<position-norm type="double">1</position-norm>
-	</canopy-->
+	</canopy>
 	<computers>
 		<navigation>
 			<mode type="string">bug</mode>
