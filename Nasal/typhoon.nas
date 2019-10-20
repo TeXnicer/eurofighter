@@ -40,7 +40,7 @@ controls.gearDown = func(v) {
 	if ( !WOW ) {
 		setprop("/controls/gear/gear-down", 0); 
 					avionics.controls.gearLights(2);
-					setprop("sim/multiplay/generic/int[7]", 2);
+					setprop("/controls/switches/gear-lights", 2);
 	}
     } elsif (v > 0) {
       setprop("/controls/gear/gear-down", 1);
@@ -61,7 +61,7 @@ gearDownClick = func() {
 		if ( !WOW ) {
 			setprop("/controls/gear/gear-down", 0); 
 					avionics.controls.gearLights(2);
-					setprop("sim/multiplay/generic/int[7]", 2);
+					setprop("/controls/switches/gear-lights", 2);
 		}
     } elsif (!OldValue) {
       setprop("/controls/gear/gear-down", 1);
@@ -161,7 +161,7 @@ var SetAp = func() {
 };
 
 #### chute&reverser ####
-# chute is deployed and then (released and repacked) with keyboard "d"
+# chute is deployed and then (released and repacked) with keyboard "E"
 # Chutes, How do they work in yasim? --add the chute to yasim file
 # Using reverser + brake parking here 
 
@@ -187,8 +187,8 @@ var toggle_chute = func {
 	    setprop("controls/chute/position-norm", 1);
 	    #screen.log.write("Chute deployed..");
 	    interpolate("controls/chute-pos-norm", 1, 1);
-            interpolate("/controls/gear/brake-left", 0.8, 0.075);
-            interpolate("/controls/gear/brake-right", 0.8, 0.075);
+            interpolate("/controls/gear/brake-left", 0.5, 0.075);
+            interpolate("/controls/gear/brake-right", 0.5, 0.075);
 	 		chute_state = 1;
 	 	   	
 		}	elsif ((chute_state == 1) and (getprop("controls/chute-pos-norm") == 1.0)) {

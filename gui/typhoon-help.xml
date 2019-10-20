@@ -37,10 +37,13 @@
 		<name>E</name>
 		<desc>Open - Release Brake Chute</desc>
 	</key>
+    <!--
 	<key>
 		<name>F</name>
 		<desc>Toggle demo smoke</desc>
 	</key>
+    -->
+    
 	<key>
 		<name>L</name>
 		<desc>Engage launchbar</desc>

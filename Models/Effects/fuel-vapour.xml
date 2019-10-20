@@ -16,7 +16,7 @@
 		</offsets>
 		<texture>trail_smoke.png</texture>
 		<condition>
-			<property>sim/multiplay/generic/int[19]</property>
+			<property>sim/multiplay/generic/bool[2]</property>
 		</condition>
 		<emissive>false</emissive>
 		<lighting>false</lighting>

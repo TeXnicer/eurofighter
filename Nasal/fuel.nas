@@ -136,10 +136,10 @@ var fuel_vent = func {
  
    if ((fvalt > 400) and (fvspd > 100)) {
       if ((fvinv) or (fvdump)) {
-	     setprop("/sim/multiplay/generic/int[19]", 1);
+	     setprop("/consumables/fuel/fueldump", 1);
 		 }
 	  else {
-	     setprop("/sim/multiplay/generic/int[19]", 0);
+	     setprop("/consumables/fuel/fueldump", 0);
 	     }
 	 }
    settimer(fuel_vent, 1);

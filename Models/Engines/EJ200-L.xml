@@ -139,7 +139,7 @@
 		<object-name>Engine1</object-name>
 		<condition>
 				<equals>
-					<property>/controls/switches/lp-cock-left</property>
+					<property>sim/multiplay/generic/bool[1]</property>
 					<value>1</value>
 				</equals>
 		</condition>
@@ -184,7 +184,7 @@
 				<value>0.4</value>
 			</greater-than>
 			<equals>
-				<property>/controls/switches/lp-cock-left</property>
+				<property>sim/multiplay/generic/bool[1]</property>
 				<value>1</value>
 			</equals>
 			<greater-than>
@@ -282,9 +282,9 @@
 		<object-name>Engine1</object-name>
 		<object-name>Engine2</object-name>
 		<condition>
-			<property>/engines/engine[0]/running</property>
+			<property>sim/multiplay/generic/float[13]</property>
 			<equals>
-				<property>/controls/switches/lp-cock-left</property>
+				<property>sim/multiplay/generic/bool[1]</property>
 				<value>1</value>
 			</equals>
 		</condition>

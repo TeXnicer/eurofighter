@@ -37,7 +37,8 @@
 			<script>typhoon.canopy.toggle();</script>
 		</binding>
 	</key>
-	<key n="70">
+	
+    <!--<key n="70">
 		<name>F</name>
 		<desc>Toggle smoke</desc>
 		<binding>
@@ -50,7 +51,8 @@
 			<command>property-toggle</command>
 			<property>sim/multiplay/generic/int[11]</property>
 		</binding>
-	</key>
+    </key>-->
+    
 	<key n="107">
 		<name>k</name>
 		<desc>Extend Speedbrakes</desc>

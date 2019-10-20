@@ -28,7 +28,7 @@
 		<object-name>flamme1</object-name>
 		<object-name>flamme2</object-name>
 		<object-name>flamme3</object-name>
-		<property>controls/engines/engine[0]/throttle</property>
+		<property>sim/multiplay/generic/float[26]</property>
 		<factor> 100 </factor>
 		<center>
 			<x-m> 0.000 </x-m>
@@ -46,11 +46,11 @@
 		<object-name>flamme1</object-name>
 		<condition>
 			<greater-than>
-				<property>controls/engines/engine[0]/throttle</property>
+				<property>sim/multiplay/generic/float[26]</property>
 				<value>0.9</value>
 			</greater-than>
 			<less-than>
-				<property>controls/engines/engine[0]/throttle</property>
+				<property>sim/multiplay/generic/float[26]</property>
 				<value>0.95</value>
 			</less-than>
 		</condition>
@@ -60,11 +60,11 @@
 		<object-name>flamme2</object-name>
 		<condition>
 			<greater-than>
-				<property>controls/engines/engine[0]/throttle</property>
+				<property>sim/multiplay/generic/float[26]</property>
 				<value>0.95</value>
 			</greater-than>
 			<less-than>
-				<property>controls/engines/engine[0]/throttle</property>
+				<property>sim/multiplay/generic/float[26]</property>
 				<value>1</value>
 			</less-than>
 		</condition>
@@ -74,7 +74,7 @@
 		<object-name>flamme3</object-name>
 		<condition>
 			<equals>
-				<property>controls/engines/engine[0]/throttle</property>
+				<property>sim/multiplay/generic/float[26]</property>
 				<value>1</value>
 			</equals>
 		</condition>

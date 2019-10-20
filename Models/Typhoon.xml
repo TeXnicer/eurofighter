@@ -79,7 +79,7 @@
 		<type>select</type>
 		<condition>
 			<not>
-				<property>sim/rendering/rembrandt/enabled</property>
+				<property>/sim/rendering/rembrandt/enabled</property>
 			</not>
 		</condition>
 		<object-name>canopyglass</object-name>
@@ -173,7 +173,7 @@
 		<object-name>airint.R</object-name>
 		<condition>
 			<greater-than>
-				<property>systems/hydraulics/circuit1_press</property>
+				<property>sim/multiplay/generic/float[24]</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -195,7 +195,7 @@
 		<object-name>airint.L</object-name>
 		<condition>
 			<greater-than>
-				<property>systems/hydraulics/circuit1_press</property>
+				<property>sim/multiplay/generic/float[24]</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -448,7 +448,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Gear.nose</object-name>
-		<property>gear/gear[0]/caster-angle-deg</property>
+		<property>sim/multiplay/generic/float[23]</property>
 		<factor>-1</factor>
 		<center>
 			<x-m>5.591</x-m>
@@ -601,8 +601,8 @@
 		<object-name>nosewheel.4</object-name>
 		<object-name>nosewheel.5</object-name>
 		<object-name>nosewheel.6</object-name>
-		<property>gear/gear[0]/rollspeed-ms</property>
-		<factor>9</factor>
+		<property>sim/multiplay/generic/float[20]</property>
+		<factor>15</factor>
 		<center>
 			<x-m>5.37700</x-m>
 			<y-m>-0.00675</y-m>
@@ -871,8 +871,8 @@
 		<type>spin</type>
 		<object-name>wheel1.L</object-name>
 		<object-name>wheel2.L</object-name>
-		<property>gear/gear[1]/rollspeed-ms</property>
-		<factor>4</factor>
+		<property>sim/multiplay/generic/float[20]</property>
+		<factor>20</factor>
 		<center>
 			<x-m> 9.45291</x-m>
 			<y-m>-2.16168</y-m>
@@ -1133,8 +1133,8 @@
 		<type>spin</type>
 		<object-name>wheel1.R</object-name>
 		<object-name>wheel2.R</object-name>
-		<property>gear/gear[2]/rollspeed-ms</property>
-		<factor>4</factor>
+		<property>sim/multiplay/generic/float[20]</property>
+		<factor>20</factor>
 		<center>
 			<x-m> 9.45213</x-m>
 			<y-m> 2.16140</y-m>
@@ -1263,7 +1263,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>Slat.L</object-name>
-		<property>surface-positions/slats-pos-norm</property>
+		<property>sim/multiplay/generic/float[21]</property>
 		<factor>0.17</factor>
 		<axis>
 			<x>-2.5</x>
@@ -1279,7 +1279,7 @@
 	<animation><!-- todo best axis -->
 		<type>translate</type>
 		<object-name>Slat.R</object-name>
-		<property>surface-positions/slats-pos-norm</property>
+		<property>sim/multiplay/generic/float[21]</property>
 		<factor>0.17</factor>
 		<axis>
 			<x>-2.5</x>
@@ -1290,7 +1290,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Slat.R</object-name>
-		<property>surface-positions/slats-pos-norm</property>
+		<property>sim/multiplay/generic/float[21]</property>
 		<factor>-10</factor>
 		<center>
 			<x-m>9.322848</x-m>
@@ -1306,7 +1306,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Slat.L</object-name>
-		<property>surface-positions/slats-pos-norm</property>
+		<property>sim/multiplay/generic/float[21]</property>
 		<factor>10</factor>
 		<center>
 			<x-m>9.322848</x-m>
@@ -1348,7 +1348,7 @@
 		<object-name>speedbrake2</object-name>
 		<condition>
 			<greater-than>
-				<property>systems/hydraulics/circuit2_press</property>
+				<property>sim/multiplay/generic/float[22]</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -1372,7 +1372,7 @@
 		<object-name>SpeedBrakeActuator</object-name>
 		<condition>
 			<greater-than>
-				<property>systems/hydraulics/circuit2_press</property>
+				<property>sim/multiplay/generic/float[22]</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -1394,7 +1394,7 @@
 		<object-name>SpeedBrakeBase</object-name>
 		<condition>
 			<greater-than>
-				<property>systems/hydraulics/circuit2_press</property>
+				<property>sim/multiplay/generic/float[22]</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -1416,7 +1416,7 @@
 		<object-name>SpeedBrakeRam</object-name>
 		<condition>
 			<greater-than>
-				<property>systems/hydraulics/circuit2_press</property>
+				<property>sim/multiplay/generic/float[22]</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -1438,7 +1438,7 @@
 		<object-name>SpeedBrakeRam</object-name>
 		<condition>
 			<greater-than>
-				<property>systems/hydraulics/circuit2_press</property>
+				<property>sim/multiplay/generic/float[22]</property>
 				<value type="int">120</value>
 			</greater-than>
 		</condition>
@@ -1507,7 +1507,7 @@
                     <value>0.5</value>
                 </greater-than>
                 <equals>
-                    <property>sim/multiplay/generic/int[18]</property>
+                    <property>sim/multiplay/generic/float[25]</property>
                     <value>1</value>
                 </equals>                
             </and>
@@ -1619,7 +1619,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Chutedoor</object-name>
-		<property>controls/chute/position-norm</property>
+		<property>sim/multiplay/generic/float[26]</property>
 		<factor>90</factor>
 		<center>
 			<x-m>14.8791</x-m>
@@ -1919,7 +1919,7 @@
 					<value>27</value>
 				</greater-than>
 				<!--greater-than>
-					<property>sim/time/sun-angle-rad</property>
+					<property>/sim/time/sun-angle-rad</property>
 					<value>1.32</value>
 				</greater-than-->
 			</and>
@@ -2058,7 +2058,7 @@
 		<object-name>normal-lights</object-name>
 		<condition>
 			<not>
-				<property>sim/rendering/rembrandt/enabled</property>
+				<property>/sim/rendering/rembrandt/enabled</property>
 			</not>
 		</condition>
 	</animation>
@@ -2070,7 +2070,7 @@
 		<object-name>TaxiRight</object-name>
 		<condition>
 			<not>
-				<property>sim/rendering/shaders/skydome</property>
+				<property>/sim/rendering/shaders/skydome</property>
 			</not>
 		</condition>
 	</animation>

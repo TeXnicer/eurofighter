@@ -19,16 +19,16 @@
 		<type>select</type>
 		<object-name>chute</object-name>
 		<condition>
-			<equals>
-				<property>controls/chute</property>
-				<value>1</value>
-			</equals>
+			<greater-than>
+				<property>sim/multiplay/generic/float[26]</property>
+				<value>0.001</value>
+			</greater-than>
 		</condition>
 	</animation>
 	<animation>
 		<type>scale</type>
 		<object-name>chute</object-name>
-		<property>controls/chute-pos-norm</property>
+		<property>sim/multiplay/generic/float[26]</property>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>

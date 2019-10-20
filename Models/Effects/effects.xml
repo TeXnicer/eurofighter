@@ -28,6 +28,8 @@
 			<pitch-deg>2</pitch-deg>
 		</offsets>
 	</model>
+    
+    <!--
 	<model>
 		<path>Aircraft/eurofighter/Models/Effects/wingtip-vortex.xml</path>
 		<name>WT-vortex</name>
@@ -48,8 +50,10 @@
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
- 
+    -->
+    
  <!--  Contrails  -->
+    <!--
 	<model>
 		<path>Aircraft/eurofighter/Models/Effects/contrail.xml</path>
 		<offsets>
@@ -66,9 +70,10 @@
 			<z-m>   0.0 </z-m>
 		</offsets>
 	</model>
-
+    -->
+    
 <!-- tiresmoke -->
-	<model>
+	<!--<model>
 		<path>Aircraft/eurofighter/Models/Effects/tire-impact-nose.xml</path>
 		<offsets>
 			<x-m> 5.45 </x-m>
@@ -83,7 +88,7 @@
 			<y-m>  0     </y-m>
 			<z-m>  -2.05  </z-m>
 		</offsets>
-	</model>
+    </model>-->
 	<model>
 		<path>Aircraft/eurofighter/Models/Effects/tire-dust-nose.xml</path>
 		<offsets>
@@ -92,7 +97,7 @@
 			<z-m>  -2.05  </z-m>
 		</offsets>
 	</model>
-	<model>
+	<!--<model>
 		<path>Aircraft/eurofighter/Models/Effects/tire-impact-stbd.xml</path>
 		<offsets>
 			<x-m> 9.64 </x-m>
@@ -107,7 +112,7 @@
 			<y-m> 2.06 </y-m>
 			<z-m> -2.05  </z-m>
 		</offsets>
-	</model>
+    </model>-->
 	<model>
 		<path>Aircraft/eurofighter/Models/Effects/tire-dust-stbd.xml</path>
 		<offsets>
@@ -116,7 +121,7 @@
 			<z-m> -2.05  </z-m>
 		</offsets>
 	</model>
-	<model>
+	<!--<model>
 		<path>Aircraft/eurofighter/Models/Effects/tire-impact-port.xml</path>
 		<offsets>
 			<x-m> 9.64 </x-m>
@@ -131,7 +136,7 @@
 			<y-m> -2.06  </y-m>
 			<z-m> -2.05 </z-m>
 		</offsets>
-	</model>
+    </model>-->
 	<model>
 		<path>Aircraft/eurofighter/Models/Effects/tire-dust-port.xml</path>
 		<offsets>

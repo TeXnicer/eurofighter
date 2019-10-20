@@ -168,7 +168,7 @@
 			</station>
 		</armament>
 		<gear>
-			<brake-parking>1</brake-parking>
+			<brake-parking type="double">1</brake-parking>
 			<tailwheel-lock type="bool">false</tailwheel-lock>
 		</gear>
 		<chute>

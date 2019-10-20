@@ -66,7 +66,7 @@ settimer(fuelflow, 0.5);
 
 var LightAls = func {
 
-	var switchPos = getprop("sim/multiplay/generic/int[7]");
+	var switchPos = getprop("/controls/switches/gear-lights");
 	var currView = getprop("/sim/current-view/name");
 	var land1 = props.globals.getNode("/controls/switches/landlight1");
 	var land2 = props.globals.getNode("/controls/switches/landlight2");

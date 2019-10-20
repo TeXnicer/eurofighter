@@ -7,13 +7,10 @@
 		<type>normal</type>
 		<texture>ground.png</texture>
 		<condition>
-			<and>
-				<property>/gear/gear[0]/wow</property>
 				<greater-than>
-					<property>/gear/gear[0]/rollspeed-ms</property>
+					<property>sim/multiplay/generic/float[20]</property>
 					<value>10</value>
 				</greater-than>
-			</and>
 		</condition>
 		<emissive>true</emissive>
 		<lighting>true</lighting>

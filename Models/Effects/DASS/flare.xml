@@ -24,7 +24,7 @@
 		<type>material</type>
 		<object-name>flare</object-name>
 		<transparency>
-			<alpha-prop>sim/time/elapsed-sec</alpha-prop>
+			<alpha-prop>/sim/time/elapsed-sec</alpha-prop>
 			<factor>-0.05</factor>
 			<offset>1.0</offset>
 		</transparency>

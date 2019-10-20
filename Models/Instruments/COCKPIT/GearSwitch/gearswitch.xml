@@ -58,7 +58,7 @@
 				<command>nasal</command>
 				<script>
 					avionics.controls.gearLights(1);
-					setprop("sim/multiplay/generic/int[7]", 1);
+					setprop("/controls/switches/gear-lights", 1);
 				</script>
 			</binding>
 		</action>
@@ -73,7 +73,7 @@
 				<command>nasal</command>
 				<script>
 					avionics.controls.gearLights(2);
-					setprop("sim/multiplay/generic/int[7]", 2);
+					setprop("/controls/switches/gear-lights", 2);
 				</script>
 			</binding>
 		</action>
@@ -88,7 +88,7 @@
 				<command>nasal</command>
 				<script>
 					avionics.controls.gearLights(3);
-					setprop("sim/multiplay/generic/int[7]", 3);
+					setprop("/controls/switches/gear-lights", 3);
 				</script>
 			</binding>
 		</action>

@@ -24,21 +24,17 @@
 	</instrumentation>
 	<multiplay>
 		<generic>
-			<string n="0" alias="/identification/pilot-name" /><!-- Pilot's Display Label (Beneath Canopy) -->
-			<string n="1" alias="/identification/aircraft-number" /><!-- Aircraft's Serial Number (Rear Flanks) -->
-            <!-- <string n="3" alias="/sim/multiplay/callsign"/>-->
-			<int n="1" alias="/gear/gear[0]/tyre-smoke"/>
-			<int n="2" alias="/gear/gear[1]/tyre-smoke"/>
-			<int n="3" alias="/gear/gear[2]/tyre-smoke"/>
+            <bool n="0" alias="/controls/switches/lp-cock-right"/>
+            <bool n="1" alias="/controls/switches/lp-cock-left"/>
+            <bool n="2" alias="/consumables/fuel/fueldump"/>
+
 			<int n="6" type="int">0</int>    <!-- radar-standby --><!-- int n="6" = radar2.radarStandbyMP -->
-			<int n="7" type="int">0</int>    <!-- als ldg-light -->
-			<int n="8" type="int">0</int>    <!-- wingtip-vortex -->
-			<int n="9" type="int">0</int>    <!-- contrail -->
-            <int n="10" type="int">0</int>   <!-- Smoke wingtip -->
-			<int n="11" type="int">0</int>   <!-- Smoke wingtip --><!-- demo smoke -->
-            <int n="18" alias="/controls/gear/brake-parking" />
-			<int n="19" alias="/systems/weapons/display-smoke" /> <!-- Smokewinders Active -->
+			<int n="7" type="int" alias="/controls/switches/gear-lights"/><!-- als ldg-light -->
+            <!--<int n="8" type="int">0</int>-->    <!-- wingtip-vortex -->
+            <!--<int n="9" type="int">0</int>-->    <!-- contrail -->
+            <!--<int n="19" alias="/systems/weapons/display-smoke" />--> <!-- Smokewinders Active -->
 			<int n="20" alias="controls/armament/gun-trigger" /> <!-- Cannon Firing -->
+            
 			<float n="1">0.0</float>
 			<float n="2" alias="/position/gear-agl-m">0.0</float> <!-- altitude for MP shadow -->
 			<float n="3">0.0</float>
@@ -51,13 +47,24 @@
 			<float n="10" alias="/surface-positions/nozzle-right-norm" /> <!-- ConDi Nozzle Right Engine -->
 			<float n="11" alias="/engines/engine[0]/reheat" /> <!-- Reheat Left Engine -->
 			<float n="12" alias="/engines/engine[1]/reheat" /> <!-- Reheat Right Engine -->
-			<float n="13" alias="/engines/engine[0]/n1" /> <!-- Left Engine -->
-			<float n="14" alias="/engines/engine[1]/n1" /> <!-- Right Engine -->
+			<float n="13" alias="/engines/engine[0]/running" /> <!-- Left Engine -->
+			<float n="14" alias="/engines/engine[1]/running" /> <!-- Right Engine -->
 			<float n="15" alias="/velocities/mach" /> <!-- Mach for Multiplayer Sound -->
 			<float n="16" alias="/engines/engine[0]/thrust-lbs" /> <!-- Thrust for Multiplayer Sound -->
 			<float n="17" alias="/engines/engine[1]/thrust-lbs" /> <!-- Thrust for Multiplayer Sound -->
 			<float n="18" alias="/controls/rotary/formation-lights" />
 			<float n="19" alias="/systems/electrical/outputs/external-lights/taxi-lights"/>
+            <float n="20" alias="/gear/gear[2]/rollspeed-ms" />
+            <float n="21" alias="/surface-positions/slats-pos-norm" />
+            <float n="22" alias="/systems/hydraulics/circuit2_press" />
+            <float n="23" alias="/gear/gear[0]/caster-angle-deg" />
+            <float n="24" alias="/systems/hydraulics/circuit1_press" />
+            <float n="25" alias="/controls/gear/brake-parking" />
+            <float n="26" alias="/controls/chute/position-norm" />
+            
+            
+            <!--<string n="0" alias="/identification/pilot-name" />--><!-- Pilot's Display Label (Beneath Canopy) -->
+            <!--<string n="1" alias="/identification/aircraft-number" />--><!-- Aircraft's Serial Number (Rear Flanks) -->
 		</generic>
 	</multiplay>
 	<submodels>

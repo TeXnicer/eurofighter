@@ -19,22 +19,22 @@
 		</offsets>
 		<condition>
 			<greater-than>
-				<property>/velocities/airspeed-kt</property>
+				<property>velocities/airspeed-kt</property>
 				<value>25</value>
 			</greater-than>
 			<less-than>
-				<property>/position/altitude-ft</property>
+				<property>position/altitude-ft</property>
 				<value>3000</value>
 			</less-than>
 			<not>
-				<property>/engines/engine[1]/augmentation</property>
+				<property>engines/engine[1]/augmentation</property>
 			</not>
 			<not>
-				<property>/controls/engines/engine[1]/reheat</property>
+				<property>controls/engines/engine[1]/reheat</property>
 				<value>1</value>
 			</not>
 			<not>
-				<property>/engines/engine[1]/afterburner</property>
+				<property>engines/engine[1]/afterburner</property>
 				<value>1</value>
 			</not>
 		</condition>
@@ -52,7 +52,7 @@
 			<phi-min-deg>0</phi-min-deg>
 			<phi-max-deg>0</phi-max-deg>
 			<speed>
-				<property>/engines/engine[1]/thrust_lb</property>
+				<property>engines/engine[1]/thrust_lb</property>
 				<factor>0.15</factor>
 				<spread>10</spread>
 			</speed>
@@ -67,7 +67,7 @@
 		</shooter>
 		<counter>
 			<particles-per-sec>
-				<property>/velocities/airspeed-kt</property>
+				<property>velocities/airspeed-kt</property>
 				<factor>0.12</factor>
 				<spread>1</spread>
 			</particles-per-sec>
@@ -86,7 +86,7 @@
 						<value>0.65</value>
 					</blue>
 					<alpha>
-						<property>/engines/engine[1]/n2</property>
+						<property>engines/engine[1]/n2</property>
 						<factor>0.00123</factor>
 						<offset>0.0006</offset>
 					</alpha>
@@ -108,7 +108,7 @@
 					</blue>
 					<alpha>
 						<alpha>
-							<property>/engines/engine[1]/n2</property>
+							<property>engines/engine[1]/n2</property>
 							<factor>0.000001</factor>
 						</alpha>
 					</alpha>

@@ -19,7 +19,7 @@
 		<factor>24</factor>
 		<condition>
 			<equals>
-				<property>/controls/switches/lp-cock-left</property>
+				<property>sim/multiplay/generic/bool[1]</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -41,7 +41,7 @@
 		<factor>25</factor>
 		<condition>
 			<equals>
-				<property>/controls/switches/lp-cock-left</property>
+				<property>sim/multiplay/generic/bool[1]</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -74,7 +74,7 @@
 		<condition>
 			<property>/engines/engine[0]/running</property>
 			<equals>
-				<property>/controls/switches/lp-cock-left</property>
+				<property>sim/multiplay/generic/bool[1]</property>
 				<value>1</value>
 			</equals>
 		</condition>

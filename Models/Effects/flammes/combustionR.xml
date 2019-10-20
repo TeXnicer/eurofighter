@@ -59,7 +59,7 @@
         <value>0.9</value>
       </greater-than>
 			<equals>
-				<property>/controls/switches/lp-cock-right</property>
+				<property>sim/multiplay/generic/bool[0]</property>
 				<value>1</value>
 			</equals>
 			<greater-than>
@@ -90,7 +90,7 @@
     <type>spin</type>
     <object-name>ReheatOuter</object-name>
     <object-name>ReheatInner</object-name>
-    <property>sim/multiplay/generic/float[14]</property>
+    <property>engines/engine[1]/n1</property>
     <factor>437</factor>
     <axis>
       <x>-1</x>
@@ -105,7 +105,7 @@
     <object-name>ReheatInner</object-name>
     <condition>
       <greater-than>
-        <property>sim/time/sun-angle-rad</property>
+        <property>/sim/time/sun-angle-rad</property>
         <value>1.7</value>
       </greater-than>
     </condition>
@@ -121,7 +121,7 @@
     <object-name>ReheatOuter</object-name>
     <condition>
       <greater-than>
-        <property>sim/time/sun-angle-rad</property>
+        <property>/sim/time/sun-angle-rad</property>
         <value>1.7</value>
       </greater-than>
     </condition>
@@ -137,7 +137,7 @@
     <object-name>flammeNight</object-name>
     <condition>
       <greater-than>
-        <property>sim/time/sun-angle-rad</property>
+        <property>/sim/time/sun-angle-rad</property>
         <value>1.7</value>
       </greater-than>
     </condition>
@@ -161,7 +161,7 @@
     <object-name>ReheatInner</object-name>
     <condition>
       <less-than>
-        <property>sim/time/sun-angle-rad</property>
+        <property>/sim/time/sun-angle-rad</property>
         <value>1.45</value>
       </less-than>
     </condition>
@@ -177,7 +177,7 @@
     <object-name>ReheatOuter</object-name>
     <condition>
       <less-than>
-        <property>sim/time/sun-angle-rad</property>
+        <property>/sim/time/sun-angle-rad</property>
         <value>1.45</value>
       </less-than>
     </condition>
@@ -193,7 +193,7 @@
     <object-name>flammeDay</object-name>
     <condition>
       <less-than>
-        <property>sim/time/sun-angle-rad</property>
+        <property>/sim/time/sun-angle-rad</property>
         <value>1.45</value>
       </less-than>
     </condition>
@@ -218,11 +218,11 @@
     <condition>
       <and>
         <less-than>
-          <property>sim/time/sun-angle-rad</property>
+          <property>/sim/time/sun-angle-rad</property>
           <value>1.7</value>
         </less-than>
         <greater-than>
-          <property>sim/time/sun-angle-rad</property>
+          <property>/sim/time/sun-angle-rad</property>
           <value>1.45</value>
         </greater-than>
       </and>
@@ -240,11 +240,11 @@
     <condition>
       <and>
         <less-than>
-          <property>sim/time/sun-angle-rad</property>
+          <property>/sim/time/sun-angle-rad</property>
           <value>1.7</value>
         </less-than>
         <greater-than>
-          <property>sim/time/sun-angle-rad</property>
+          <property>/sim/time/sun-angle-rad</property>
           <value>1.45</value>
         </greater-than>
       </and>
@@ -262,11 +262,11 @@
     <condition>
       <and>
         <less-than>
-          <property>sim/time/sun-angle-rad</property>
+          <property>/sim/time/sun-angle-rad</property>
           <value>1.7</value>
         </less-than>
         <greater-than>
-          <property>sim/time/sun-angle-rad</property>
+          <property>/sim/time/sun-angle-rad</property>
           <value>1.45</value>
         </greater-than>
       </and>

@@ -14,7 +14,7 @@
 		<condition>
 			<property>gear/gear[1]/spray</property>
 			<value>1</value>
-			<property>sim/rendering/precipitation-enable</property>
+			<property>/sim/rendering/precipitation-enable</property>
 		</condition>
 		<attach>world</attach>
 		<placer>
