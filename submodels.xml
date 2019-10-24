@@ -1249,7 +1249,7 @@ Muzzle velocity: 1025 m/s
 		<impact-report>sim/ai/aircraft/impact/droptank1500r</impact-report>
 	</submodel>
 
-	  <!-- Drag Chute -->
+	  <!-- Drag Chute 
 	<submodel>
 		<name>Braking Parachute</name>
 		<model>Aircraft/eurofighter/Models/Chute/fullchute.ac</model>
@@ -1268,5 +1268,5 @@ Muzzle velocity: 1025 m/s
 		<eda>250</eda>
 		<weight>50</weight>
 		<aero-stabilised>false</aero-stabilised>
-	</submodel>
+	</submodel>-->
 </PropertyList>

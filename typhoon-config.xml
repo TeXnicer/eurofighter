@@ -60,7 +60,7 @@
             <float n="23" alias="/gear/gear[0]/caster-angle-deg" />
             <float n="24" alias="/systems/hydraulics/circuit1_press" />
             <float n="25" alias="/controls/gear/brake-parking" />
-            <float n="26" alias="/controls/chute/position-norm" />
+            <float n="26" alias="/controls/chute-pos-norm" />
             
             
             <!--<string n="0" alias="/identification/pilot-name" />--><!-- Pilot's Display Label (Beneath Canopy) -->

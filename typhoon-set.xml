@@ -19,7 +19,7 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
         <aero>typhoon-yasim</aero>
         <fuel-fraction>0.6</fuel-fraction>
         <startup>
-            <splash-texture>Aircraft/eurofighter/Splash2.jpg</splash-texture>
+            <splash-texture>Aircraft/eurofighter/Splash.png</splash-texture>
         </startup>
         <preferences>
             <start-running type="bool">true</start-running>

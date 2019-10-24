@@ -91,7 +91,7 @@
 		<path>Aircraft/eurofighter/Models/Effects/effects.xml</path>
 	</model>
   
-  <!-- Drag Chute -->
+  <!-- Drag Chute
 	<model>
 		<path>Aircraft/eurofighter/Models/Chute/chute.xml</path>
 		<offsets>
@@ -100,7 +100,7 @@
 			<z-m>0.4</z-m>
 			<pitch-deg>-1</pitch-deg>
 		</offsets>
-	</model>
+	</model> -->
 
 <!-- Livery -->
 	<animation>
@@ -2220,4 +2220,116 @@
 			<z-m>  0.000 </z-m>
 		</offsets>
 	</model>
+    
+ <!-- Start Parachutes modified from Tu-160-Blackjack by HerbyW -->
+ 
+ <model>
+   <name>Parachute</name>
+   <path>Aircraft/eurofighter/Models/Effects/Parachutes/ParachuteEF.ac</path>
+   <condition>
+     <greater-than>
+       <property>sim/multiplay/generic/float[15]</property>
+       <value>0.03</value>
+     </greater-than>
+   </condition>
+   <offsets>
+     <x-m>14.89</x-m>
+     <y-m>0.0</y-m>
+     <z-m>0.40</z-m>
+   </offsets>   
+ </model>
+ 
+ <!-- Scale out  -->
+ 
+ <animation>
+   <type>scale</type>
+   <object-name>Parachute</object-name>
+   <property>sim/multiplay/generic/float[26]</property>
+   <interpolation>
+     <entry><ind>0.0</ind><dep>0.0</dep></entry>
+     <entry><ind>0.39</ind><dep>0.0</dep></entry>
+     <entry><ind>0.4</ind><dep>0.02</dep></entry>
+     <entry><ind>0.95</ind><dep>0.60</dep></entry>
+   </interpolation>
+   <center>
+     <x-m>14.89</x-m>
+     <y-m>0.0</y-m>
+     <z-m>0.40</z-m>
+   </center>
+ </animation>
+
+ <!-- side movement
+ 
+ <animation>
+   <type>rotate</type>
+   <object-name>Parachute</object-name>
+   <property>sim/multiplay/generic/float[26]</property>
+   <interpolation>
+     <entry><ind>0.48</ind><dep>0</dep></entry>
+     <entry><ind>0.65</ind><dep>-17</dep></entry>
+   </interpolation>
+   <center>
+     <x-m>24.92</x-m>
+     <y-m>0.07</y-m>
+     <z-m>5.49</z-m>
+   </center>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0.125</z>
+   </axis>
+ </animation> -->
+
+ <!-- Spinning -->
+ 
+ <animation>
+   <type>spin</type>
+   <object-name>Parachute</object-name>
+   <property>sim/multiplay/generic/float[15]</property>
+   <factor>40</factor>
+   <center>
+     <x-m>14.89</x-m>
+     <y-m>0.0</y-m>
+     <z-m>0.40</z-m>
+   </center>
+   <axis>
+     <x>1</x>
+     <y>0.02</y>
+     <z>0.01</z>
+   </axis>
+ </animation>
+
+ <!-- Fall off -->
+ 
+ <animation>
+   <type>translate</type>
+   <object-name>Parachute</object-name>
+   <property>sim/multiplay/generic/float[15]</property>
+   <interpolation>
+     <entry>
+       <ind>1</ind>
+       <dep>0</dep>
+     </entry>
+     <entry>
+       <ind>0.0527</ind>
+       <dep>0</dep>
+     </entry>
+     <entry>
+       <ind>0.0302</ind>
+       <dep>190</dep>
+     </entry>
+   </interpolation>
+   <center>
+     <x-m>14.89</x-m>
+     <y-m>0.0</y-m>
+     <z-m>0.40</z-m>
+   </center>
+   <axis>
+     <x>1</x>
+     <y>0</y>
+     <z>-0.375</z>
+   </axis>
+ </animation>
+
+  <!-- End Parachutes -->
   </PropertyList>

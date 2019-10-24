@@ -162,11 +162,11 @@ var SetAp = func() {
 
 #### chute&reverser ####
 # chute is deployed and then (released and repacked) with keyboard "E"
-# Chutes, How do they work in yasim? --add the chute to yasim file
+# Chutes, How do they work in yasim? --add the chute to yasim file: done!
 # Using reverser + brake parking here 
 
-# TODO: chute animation. Is this the chute of choice?
-#				rip it to shreds(release submodel) if deployed at too high speeds ( > 150?)
+# TODO: chute animation. Is this the chute of choice? Done!
+# rip it to shreds(release submodel) if deployed at too high speeds ( > 150?)
 
 var chute_state = getprop("/controls/chute");
 
@@ -181,14 +181,14 @@ var toggle_chute = func {
     } else {
        
   	if (chute_state == 0) {
-	    # stream the chute - 1 second. 
+	    # stream the chute - 2 seconds. 
 	    # engage all methods of braking..
 	    setprop("autopilot/locks/speed", 0); # in case
 	    setprop("controls/chute/position-norm", 1);
 	    #screen.log.write("Chute deployed..");
-	    interpolate("controls/chute-pos-norm", 1, 1);
-            interpolate("/controls/gear/brake-left", 0.5, 0.075);
-            interpolate("/controls/gear/brake-right", 0.5, 0.075);
+	    interpolate("controls/chute-pos-norm", 1, 2);
+            interpolate("/controls/gear/brake-left", 0.05, 0.075);
+            interpolate("/controls/gear/brake-right", 0.05, 0.075);
 	 		chute_state = 1;
 	 	   	
 		}	elsif ((chute_state == 1) and (getprop("controls/chute-pos-norm") == 1.0)) {
