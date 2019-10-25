@@ -2332,4 +2332,43 @@
  </animation>
 
   <!-- End Parachutes -->
+ 
+ <!--runway effect -->
+ 
+ <model> 
+     <path>Aircraft/eurofighter/Models/Effects/tyres.xml</path>
+     <offsets>
+         <x-m> 9.64 </x-m>
+         <y-m> 2.06 </y-m>
+         <z-m> -1.95  </z-m>
+     </offsets>
+ </model>
+ 
+ <model> 
+     <path>Aircraft/eurofighter/Models/Effects/tyres.xml</path>
+     <offsets>
+         <x-m> 9.64 </x-m>
+         <y-m> -2.06 </y-m>
+         <z-m> -1.95  </z-m>
+     </offsets>
+ </model>
+ 
+ <model> 
+     <path>Aircraft/eurofighter/Models/Effects/touch.xml</path>
+     <offsets>
+         <x-m> 9.64 </x-m>
+         <y-m> 2.06 </y-m>
+         <z-m> -2.05  </z-m>
+     </offsets>
+ </model>
+ 
+ <model> 
+     <path>Aircraft/eurofighter/Models/Effects/touch.xml</path>
+     <offsets>
+         <x-m> 9.64 </x-m>
+         <y-m> -2.06 </y-m>
+         <z-m> -2.05  </z-m>
+     </offsets>
+ </model>
+
   </PropertyList>

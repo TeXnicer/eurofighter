@@ -362,3 +362,35 @@ var updatefunction = func(){
      typhoon.computeSAS();     
      typhoon.UpdateHead();
 }
+
+##############################################################################################################
+# runway effect by HerbyW
+setprop("/velocities/speed-down-fps", 0);
+setprop("/gear/gear[2]/rollspeed-ms", 0);
+setprop("/gear/gear[2]/compression-norm", 0);
+
+setprop("/controls/gear/runway", 0);
+
+setlistener("/gear/gear[2]/wow", func
+{
+  if (getprop("/gear/gear[2]/wow") == 0)
+    interpolate("/controls/gear/runway", 0 , 0.1);
+  else
+  {
+  if ( ( getprop("/gear/gear[2]/compression-norm") > 0.28 ) and ( getprop("/gear/gear[2]/rollspeed-ms") > 40)  and ( getprop("/velocities/speed-down-fps") > 2))
+    interpolate("/controls/gear/runway", 1 , 0.3, 0 , 0.3);
+  }
+}
+);
+
+setlistener("/controls/gear/brake-parking", func
+{
+  if (getprop("/controls/gear/brake-parking") == 0)
+    interpolate("/controls/gear/runway", 0 , 0.1);
+  else
+  {
+  if ( ( getprop("/controls/gear/brake-parking") == 1 ) and ( getprop("/gear/gear[2]/rollspeed-ms") > 30) )
+    interpolate("/controls/gear/runway", 1 , 1.2, 0 , 1.2);
+  }
+}
+);

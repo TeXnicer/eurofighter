@@ -170,6 +170,7 @@
 		<gear>
 			<brake-parking type="double">1</brake-parking>
 			<tailwheel-lock type="bool">false</tailwheel-lock>
+            <runway type="double">0</runway>
 		</gear>
 		<chute>
 			<position-norm type="double">0</position-norm>
