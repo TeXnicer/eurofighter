@@ -42,11 +42,13 @@
 	<model>
 		<path>Aircraft/eurofighter/Models/External-objects/Pylons/pylons.xml</path>
 	</model>
-	<model>
+    
+<!--	<model>
 		<path>Aircraft/eurofighter/Models/Identification/identification.xml</path>
 	</model>
+-->
 
-  <!-- Rembrandt Glass Select -->
+    <!-- Rembrandt Glass Select -->
 	<effect>
 		<inherits-from>Effects/model-transparent</inherits-from>
 		<object-name>canopyglass</object-name>
@@ -215,7 +217,8 @@
 	
 	<!-- Cockpit -->
 	<model>
-		<path>Aircraft/eurofighter/Models/Pilot/pilot.xml</path>
+		<path>Aircraft/eurofighter/Models/pilotN/pilot.xml</path>
+        <name>Pilot</name>
 		<offsets>
 			<x-m>3.83</x-m>
 			<y-m>-0.015</y-m>

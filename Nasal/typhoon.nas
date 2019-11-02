@@ -1,4 +1,4 @@
-#### Typhonn systems	
+#### Typhoon systems	
 #### from many sources...
 #### and also, almursi and algernon work
 var myRadar3 = radar.Radar.new(NewRangeTab:[5, 10, 20, 50, 100, 150],NewRangeIndex:1,forcePath:"instrumentation/radar2/targets",NewAutoUpdate:1);
@@ -70,9 +70,6 @@ gearDownClick = func() {
       # setprop("/controls/gear/tailwheel-lock", 0);
     }
 }
-
-#### Afterburner
-## see bottom section file
 
 # turn off HUD in external views
 # setlistener("/sim/current-view/view-number", func(n) { setprop("/sim/hud/visibility[1]", n.getValue() == 0) },1);
@@ -160,11 +157,9 @@ var SetAp = func() {
 		}
 };
 
-#### chute&reverser ####
+#### chute ####
 # chute is deployed and then (released and repacked) with keyboard "E"
 # Chutes, How do they work in yasim? --add the chute to yasim file: done!
-# Using reverser + brake parking here 
-
 # TODO: chute animation. Is this the chute of choice? Done!
 # rip it to shreds(release submodel) if deployed at too high speeds ( > 150?)
 
@@ -193,7 +188,7 @@ var toggle_chute = func {
 	 	   	
 		}	elsif ((chute_state == 1) and (getprop("controls/chute-pos-norm") == 1.0)) {
 	    # Jettison the chute
-	    # release brakes and reverser
+	    # release brakes
 	    #screen.log.write("Chute jettisoned");
 	    setprop("controls/chute-pos-norm", 0.0);
 	    setprop("controls/chute-jettison", 1);
@@ -213,9 +208,6 @@ var toggle_chute = func {
 ## Afterburner
 # Due to the possible connection* to generic autopilot reheat wants to set in on autothrottle 
 # (only if engaged via /autopilot/locks/speed-with-throtle). Preventing this.
-# With added friction to gears in yasim there is no need for reverser anymore. It is used for the chute,
-# since there is no chute declared in yasim and so no drag.
-# 
 # * autopilotconnectors below in this file allow one to use 'regular' ap/menu/shortcuts for 
 # pitch-hold, speed-with-throttle, wings-level and altitude-hold which triggers the systems-ap
 
@@ -251,24 +243,23 @@ var reheat = func {
 
 # the reverse of below (listener on [0]) doesn't keep the values in sync	
 setlistener("controls/engines/engine[1]/throttle", func {
-	var reverser	= getprop("/controls/engines/engine[0]/reverser");
 	var t = throttle.getValue();
-	if (reverser) {	
-		no_reheat();		
-		if (t > 0.5) {
-			foreach(e; engine) {
-			var throttle = e.getNode("throttle", 1);
-			throttle.setValue(0.5);
-			}
-		}		
-	} else {
-		if (t < 0.98 ) {
+	if (t < 0.98 ) {
 			no_reheat();
 		} else {
 			reheat();		
 		}
-	}			 
 });
+
+setlistener("controls/engines/engine[0]/throttle", func {
+	var t = throttle.getValue();
+	if (t < 0.98 ) {
+			no_reheat();
+		} else {
+			reheat();		
+		}
+});
+
 
 ## auto-slats --modeling needs work?
 # maybe add the variable intake to this?

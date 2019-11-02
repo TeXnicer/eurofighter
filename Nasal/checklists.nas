@@ -1,4 +1,7 @@
 # Settings
+
+setprop("/controls/engines/engine[0]/reheat", 0);
+
 var stepTime = 1.5; # Time between each step, before delay, in seconds
 
 props.globals.initNode("/sim/autostart/step", 0, "INT");

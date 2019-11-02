@@ -6,11 +6,6 @@
 		<type>translate</type>
 		<object-name>throttle.R</object-name>
 		<property>controls/engines/engine[1]/throttle</property>
-		<condition>
-			<not>
-				<property>/controls/engines/engine[1]/reverser</property>
-			</not>
-		</condition>
 		<factor>0.17</factor><!-- 0.2210 (-.0511) = 0.17-->
 		<axis>
 			<x>-1</x>
@@ -23,11 +18,6 @@
 		<type>translate</type>
 		<object-name>throttle.L</object-name>
 		<property>controls/engines/engine[0]/throttle</property>
-		<condition>
-			<not>
-				<property>/controls/engines/engine[0]/reverser</property>
-			</not>
-		</condition>
 		<factor>0.17</factor>
 		<axis>
 			<x>-1</x>
@@ -40,63 +30,6 @@
 		<object-name>throttles</object-name>
 		<type>noshadow</type>
 	</animation>
-	<animation>
-		<type>translate</type>
-		<object-name>throttle.R</object-name>
-		<property>controls/engines/engine[1]/throttle</property>
-		<condition>
-			<property>/controls/engines/engine[1]/reverser</property>
-		</condition>
-		<factor>0.22</factor><!-- 130% = 0.2210 -->
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>translate</type>
-		<object-name>throttle.L</object-name>
-		<property>controls/engines/engine[0]/throttle</property>
-		<condition>
-			<property>/controls/engines/engine[0]/reverser</property>
-		</condition>
-		<factor>0.22</factor>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<!--animation>
-		<type>translate</type>
-		<object-name>throttle.R</object-name>
-		     <property>/controls/engines/engine[0]/reverser</property>
-		<factor>0.01</factor>
-		<axis>
-			<x>0.01</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>translate</type>
-		<object-name>throttle.L</object-name>
-			<property>/controls/engines/engine[1]/reverser</property>
-		<factor>0.01</factor>
-		<axis>
-			<x>0.01</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<object-name>throttles</object-name>
-		<type>noshadow</type>
-	</animation-->
 
 	<animation>
 		<type>translate</type>

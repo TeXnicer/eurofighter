@@ -17,7 +17,7 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
         <minimum-flightgear-version>2018.3.2</minimum-flightgear-version>
         <flight-model>yasim</flight-model>
         <aero>typhoon-yasim</aero>
-        <fuel-fraction>0.6</fuel-fraction>
+        <fuel-fraction>0.95</fuel-fraction>
         <startup>
             <splash-texture>Aircraft/eurofighter/Splash.png</splash-texture>
         </startup>
@@ -96,6 +96,7 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
     </sim>
     
     <systems include="typhoon-systems.xml" />
+    
     <identification>
         <aircraft-number type="string" archive="y">XP-210</aircraft-number>
         <pilot-name type="string" archive="y"></pilot-name>
@@ -321,104 +322,5 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
             <file>Aircraft/eurofighter/Nasal/warnings.nas</file>
         </warnings>
     </nasal>
-    
-    <logging>
-        <log>
-            <filename>C:/Users/soweli/Documents/eurofighter_testdata.csv</filename>
-            <enabled>false</enabled>
-            <interval-ms>500</interval-ms>/accelerations/pilot/z-accel-fps_sec
-            <delimiter>,</delimiter>
-            <entry>
-                <enabled>true</enabled>
-                <title>G Load</title>
-                <property>/accelerations/pilot/z-accel-fps_sec</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>Raw elevator control</title>
-                <property>/controls/flight/elevator</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>FCS elevator input</title>
-                <property>/systems/FCS/control-inputs/elevator</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>Elevator input gain</title>
-                <property>/systems/FCS/settings/stick-scale-pitch</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>AP altitude lock</title>
-                <property>/systems/autopilot/locks/altitude</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>FCS override</title>
-                <property>/controls/buttons/FCS-override</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>FCS internal pitch command</title>
-                <property>/systems/FCS/internal/pitch-command</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>raw elevator trim</title>
-                <property>controls/flight/elevator-trim</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>FCS input elevator trim</title>
-                <property>/systems/FCS/control-inputs/elevator-trim</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>canard trim</title>
-                <property>/systems/FCS/internal/canard-trim</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>FCS electrical</title>
-                <property>/systems/electrical/outputs/FCS</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>flaperon offset</title>
-                <property>/systems/FCS/settings/flaperon-offset</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>flaperon pitch</title>
-                <property>/systems/FCS/command-outputs/flaperon-pitch</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>fcs canard offset setting</title>
-                <property>/systems/FCS/settings/canard-offset</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>canard out</title>
-                <property>/systems/FCS/command-outputs/canard</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>canard scale</title>
-                <property>/systems/FCS/settings/canard-scale</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>speedbrake out</title>
-                <property>/systems/FCS/command-outputs/speedbrake</property>
-            </entry>
-            <entry>
-                <enabled>true</enabled>
-                <title>brake compensator</title>
-                <property>/systems/FCS/command-outputs/brake-compensator</property>
-            </entry>
-        </log>
-    </logging>
     
 </PropertyList>

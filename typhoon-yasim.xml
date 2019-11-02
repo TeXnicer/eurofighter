@@ -12,26 +12,114 @@ YASim solution results:
 Approach Elevator: 0.0526625
             CG: -9.642, -0.000, 0.087
 
+            YASim solution results: with fuel settings added
+            <approach speed="130" aoa="9" fuel="0.3">
+            <cruise speed="860" alt="50000" fuel="0.8">
+       Iterations: 334
+ Drag Coefficient: 12.1213
+       Lift Ratio: 240.931
+       Cruise AoA: 1.22128
+   Tail Incidence: -1.4509
+Approach Elevator: 0.00985154
+            CG: -9.597, -0.000, 0.059
+            
+            YASim solution results:<approach speed="125" aoa="12" fuel="0.3">
+       Iterations: 410
+ Drag Coefficient: 11.9706
+       Lift Ratio: 196.815
+       Cruise AoA: 1.61311
+   Tail Incidence: -1.7907
+Approach Elevator: 0.0358025
+            CG: -9.597, -0.000, 0.059
+            
+            YASim solution results:<approach speed="125" aoa="9" fuel="0.3">
+       Iterations: 303
+ Drag Coefficient: 12.1743
+       Lift Ratio: 261.06
+       Cruise AoA: 1.08534
+   Tail Incidence: -1.32888
+Approach Elevator: 0.00364399
+            CG: -9.597, -0.000, 0.059
+            
+            YASim solution results:<approach speed="125" aoa="10" fuel="0.3">
+       Iterations: 342
+ Drag Coefficient: 12.1057
+       Lift Ratio: 235.518
+       Cruise AoA: 1.26169
+   Tail Incidence: -1.48676
+Approach Elevator: 0.0125943
+            CG: -9.597, -0.000, 0.059
+            
+            YASim solution results:<approach speed="120" aoa="10" fuel="0.3">
+       Iterations: 311
+ Drag Coefficient: 12.1618
+       Lift Ratio: 256.038
+       Cruise AoA: 1.11731
+   Tail Incidence: -1.35776
+Approach Elevator: 0.00567533
+            CG: -9.597, -0.000, 0.059
+            
+            YASim solution results:<approach speed="115" aoa="12" fuel="0.3">
+       Iterations: 355
+ Drag Coefficient: 12.1
+       Lift Ratio: 233.601
+       Cruise AoA: 1.27644
+   Tail Incidence: -1.49979
+Approach Elevator: 0.0182929
+            CG: -9.597, -0.000, 0.059
+            
+            YASim solution results:
+            <approach speed="115" aoa="12" fuel="0.3">
+            <cruise speed="860" alt="36000" fuel="0.8">
+       Iterations: 222
+ Drag Coefficient: 12.6721
+       Lift Ratio: 223.051
+       Cruise AoA: 0.364714
+   Tail Incidence: -0.545195
+Approach Elevator: -0.00811767
+            CG: -9.597, -0.000, 0.059
+            
+            YASim solution results:flaps 1 speedbrake 0.3 slats 1
+       Iterations: 408
+ Drag Coefficient: 12.6582
+       Lift Ratio: 202.062
+       Cruise AoA: 0.455562
+   Tail Incidence: -0.618936
+Approach Elevator: -0.240124
+            CG: -9.597, -0.000, 0.059
+            
+            YASim solution results:throttle" value="0.3 (war 0.4) throttle" value="0.94
+       Iterations: 407
+ Drag Coefficient: 12.6603
+       Lift Ratio: 205.968
+       Cruise AoA: 0.437407
+   Tail Incidence: -0.604371
+Approach Elevator: -0.25908
+            CG: -9.597, -0.000, 0.059
 -->
 
 <airplane mass="24251" version="YASIM_VERSION_CURRENT">
 
   <!-- Approach configuration	 -->
-	<approach speed="130" aoa="9">
-		<control-setting axis="/systems/DECMU/command-outputs/engine[0]/throttle" value="0.4"/>
-		<control-setting axis="/systems/DECMU/command-outputs/engine[1]/throttle" value="0.4"/>
-		<control-setting axis="/controls/flight/flaps" value="0"/>
+	<approach speed="115" aoa="12" fuel="0.3">
+		<control-setting axis="/systems/DECMU/command-outputs/engine[0]/throttle" value="0.3"/>
+		<control-setting axis="/systems/DECMU/command-outputs/engine[1]/throttle" value="0.3"/>
+        <control-setting axis="/controls/engines/engine[0]/reheat" value="0"/>
+        <control-setting axis="/controls/engines/engine[1]/reheat" value="0"/>
+		<control-setting axis="/controls/flight/flaps" value="1"/>
 		<control-setting axis="/controls/gear/gear-down" value="1"/>
-		<control-setting axis="/controls/flight/speedbrake" value="0"/>
-		<control-setting axis="/controls/flight/slats" value="0"/>
+		<control-setting axis="/systems/FCS/command-outputs/speedbrake" value="0.3"/>
+		<control-setting axis="/controls/flight/slats" value="1"/>
 	</approach>
 
-	<cruise speed="860" alt="50000">
+	<cruise speed="860" alt="36000" fuel="0.8">
 		<control-setting axis="/systems/DECMU/command-outputs/engine[0]/throttle" value="0.94"/>
 		<control-setting axis="/systems/DECMU/command-outputs/engine[1]/throttle" value="0.94"/>
+        <control-setting axis="/controls/engines/engine[0]/reheat" value="0"/>
+        <control-setting axis="/controls/engines/engine[1]/reheat" value="0"/>
 		<control-setting axis="/controls/flight/flaps" value="0"/>
 		<control-setting axis="/controls/gear/gear-down" value="0"/>
-		<control-setting axis="/controls/flight/speedbrake" value="0"/>
+		<control-setting axis="/systems/FCS/command-outputs/speedbrake" value="0"/>
 		<control-setting axis="/controls/flight/slats" value="0"/>
 	</cruise>
 
@@ -154,9 +242,8 @@ Approach Elevator: 0.0526625
     <!--thrust vectoring here -->
 		<control-input axis="/systems/DECMU/command-outputs/engine[0]/throttle" control="THROTTLE" />
 		<control-input axis="/controls/engines/engine[0]/reheat" control="REHEAT"/>
-		<control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST" />
-		<control-input axis="/systems/DECMU/command-outputs/nozzle-angle-pitch" control="VECTOR" />
-		<control-output control="VECTOR" prop="/engines/engine[0]/nozzle-position" />
+        <!--<control-input axis="/systems/DECMU/command-outputs/nozzle-angle-pitch" control="VECTOR" />-->
+        <!--<control-output control="VECTOR" prop="/engines/engine[0]/nozzle-position" />-->
 		<control-output control="REHEAT" prop="/engines/engine[0]/reheat" />
 		<control-speed control="REHEAT" transition-time="1.2"/>
 	</jet>
@@ -173,9 +260,8 @@ Approach Elevator: 0.0526625
     <!--thrust vectoring here -->
 		<control-input axis="/systems/DECMU/command-outputs/engine[1]/throttle" control="THROTTLE" />
 		<control-input axis="/controls/engines/engine[1]/reheat" control="REHEAT"/>
-		<control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
-		<control-input axis="/systems/DECMU/command-outputs/nozzle-angle-pitch" control="VECTOR" />
-		<control-output control="VECTOR" prop="/engines/engine[1]/nozzle-position" />
+        <!--<control-input axis="/systems/DECMU/command-outputs/nozzle-angle-pitch" control="VECTOR" />-->
+        <!--<control-output control="VECTOR" prop="/engines/engine[1]/nozzle-position" />-->
 		<control-output control="REHEAT" prop="/engines/engine[1]/reheat" />
 		<control-speed control="REHEAT" transition-time="1.2"/>
 	</jet>

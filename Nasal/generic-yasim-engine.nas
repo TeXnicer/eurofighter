@@ -48,8 +48,6 @@ var Jet =
 		m.n1.setDoubleValue(0);
 		m.out_of_fuel = props.globals.getNode("engines/engine[" ~ n ~ "]/out-of-fuel", 1);
 		m.out_of_fuel.setBoolValue(0);
-		m.reverser = props.globals.getNode("controls/engines/engine[" ~ n ~ "]/reverser", 1);
-		m.reverser.setBoolValue(0);
 		m.rpm = props.globals.getNode("engines/engine[" ~ n ~ "]/rpm", 1);
 		m.rpm.setDoubleValue(running ? 100 : 0);
 		m.running = props.globals.getNode("engines/engine[" ~ n ~ "]/running", 1);
@@ -58,7 +56,7 @@ var Jet =
 		m.serviceable.setBoolValue(1);
 		m.starter = props.globals.getNode("controls/engines/engine[" ~ n ~ "]/starter", 1);
 		m.starter.setBoolValue(0);
-		m.throttle = props.globals.getNode("systems/DECMU/command-ouputs/engine[" ~ n ~ "]/throttle", 1);
+		m.throttle = props.globals.getNode("systems/DECMU/command-outputs/engine[" ~ n ~ "]/throttle", 1);
 		m.throttle.setDoubleValue(0);
 		m.throttle_lever = props.globals.getNode("controls/engines/engine[" ~ n ~ "]/throttle-lever", 1);
 		m.throttle_lever.setDoubleValue(0);

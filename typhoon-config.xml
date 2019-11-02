@@ -115,7 +115,7 @@
 		<daylight-dim type="double">0.5</daylight-dim>
 	</lighting>
 
-    <chase-distance-m type="double" archive="y"> -45 </chase-distance-m>
+    <chase-distance-m type="double" archive="y"> -40 </chase-distance-m>
     
 	<view n="0">
 		<internal archive="y">true</internal>
