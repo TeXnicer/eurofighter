@@ -5,12 +5,14 @@
 Eurofighter Typhoon simulation config.
 
 By MaverickAlex, D. Faber, AlMurSi & Algernon
+
+HerbyW, D-EKSW
 ************************************************************************
 -->
 <PropertyList include="typhoon-cockpit.xml">
     
     <sim include="typhoon-config.xml">
-        <description>EFA (Eurofighter) Typhoon</description>
+        <description>EFA (Eurofighter) Typhoon (D-EKSW fork)</description>
         <author>Herbert Wagner, Maverick Alex and others</author>
         <status>Special Edition</status>
         <aircraft-version>2.0</aircraft-version>
@@ -18,9 +20,69 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
         <flight-model>yasim</flight-model>
         <aero>typhoon-yasim</aero>
         <fuel-fraction>0.95</fuel-fraction>
+
+	<previews>
+			<preview>
+				<type>cockpit</type>
+				<path>Splash/typhoon-cockpit1.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>cockpit</type>
+				<path>Splash/typhoon-cockpit2.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>cockpit</type>
+				<path>Splash/typhoon-cockpit3.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<path>Splash/typhoon-exterior1.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<path>Splash/typhoon-exterior2.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<path>Splash/typhoon-exterior3.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<path>Splash/typhoon-exterior4.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<path>Splash/typhoon-exterior5.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<path>Splash/typhoon-exterior6.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<path>Splash/typhoon-exterior7.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<path>Splash/typhoon-exterior8.jpg</path>
+				<splash type="bool">true</splash>
+			</preview>
+		</previews>
+	<!-- old system taken off in April 2020 by D-EKSW
         <startup>
             <splash-texture>Aircraft/eurofighter/Splash.png</splash-texture>
         </startup>
+	--> 
         <preferences>
             <start-running type="bool">true</start-running>
         </preferences>
@@ -254,8 +316,9 @@ By MaverickAlex, D. Faber, AlMurSi & Algernon
             <file>Aircraft/eurofighter/Nasal/computers.nas</file>
         </computers>
         <checklists>
-            <file>Aircraft/eurofighter/Nasal/checklists.nas</file>
-        </checklists>
+          <!--<file>Aircraft/eurofighter/typhoon-checklists.xml</file> does not work yet-->
+	  <file>Aircraft/eurofighter/Nasal/checklists.nas</file>
+	</checklists>
         <fcs>
             <file>Aircraft/eurofighter/Nasal/fcs.nas</file>
         </fcs>
