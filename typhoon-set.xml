@@ -12,8 +12,9 @@ HerbyW, D-EKSW
 <PropertyList include="typhoon-cockpit.xml">
     
     <sim include="typhoon-config.xml">
-        <description>EFA (Eurofighter) Typhoon (D-EKSW fork)</description>
+        <description>EFA (Eurofighter) Typhoon</description>
         <author>Herbert Wagner, Maverick Alex and others</author>
+	<!-- D-EKSW -->
         <status>Special Edition</status>
         <aircraft-version>2.0</aircraft-version>
         <minimum-flightgear-version>2018.3.2</minimum-flightgear-version>
@@ -140,13 +141,18 @@ HerbyW, D-EKSW
         <autostart>
             <started type="bool">false</started>
         </autostart>
+	
         <help include="gui/typhoon-help.xml"></help>
+	
         <menubar include="Dialogs/typhoon-menu.xml"></menubar>
+	
         <stall-warning type="bool">true</stall-warning>
+	
         <wildlife>
             <birdsong type="bool">true</birdsong>
             <birdsong-volume type="double">0.75</birdsong-volume>
         </wildlife>
+	
         <rendering>
             <als-secondary-lights>
                 <landing-light1-offset-deg type="double">0</landing-light1-offset-deg>
@@ -155,6 +161,10 @@ HerbyW, D-EKSW
             </als-secondary-lights>
             <shadow-volume type="bool">true</shadow-volume>
         </rendering>
+
+	<!-- added by D-EKSW on April 7th, 2020 -->
+	<checklists include="Checklists/typhoon-checklists.xml" />
+	
     </sim>
     
     <systems include="typhoon-systems.xml" />
@@ -316,8 +326,7 @@ HerbyW, D-EKSW
             <file>Aircraft/eurofighter/Nasal/computers.nas</file>
         </computers>
         <checklists>
-          <!--<file>Aircraft/eurofighter/typhoon-checklists.xml</file> does not work yet-->
-	  <file>Aircraft/eurofighter/Nasal/checklists.nas</file>
+    	  <file>Aircraft/eurofighter/Nasal/checklists.nas</file>
 	</checklists>
         <fcs>
             <file>Aircraft/eurofighter/Nasal/fcs.nas</file>
@@ -385,5 +394,4 @@ HerbyW, D-EKSW
             <file>Aircraft/eurofighter/Nasal/warnings.nas</file>
         </warnings>
     </nasal>
-    
 </PropertyList>

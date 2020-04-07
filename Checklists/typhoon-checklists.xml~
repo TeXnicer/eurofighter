@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
   <group>
     <name>Ground Procedures</name>
@@ -280,14 +280,14 @@
      </checklist>
      <checklist>
       <title>Engine Startup</title>
-      <item>
+       <item>
 	<name>Engine Start Switch</name>
-	<value>flip ON</value>
+	<value>set ON</value>
 	<condition>
-	<equals>
-	  <property>/controls/switches/engine-start</property>
-	  <value>2</value>
-	</equals>
+	    <equals>
+	      <property>/controls/switches/engine-start</property>
+	      <value>1</value>
+	    </equals>
 	</condition>
 	<marker>
 	  <x-m>3.8333</x-m>
@@ -300,8 +300,40 @@
 	  <property>/controls/switches/engine-start</property>
 	  <value>2</value>
 	</binding>
+	<binding>
+	  <command>property-assign</command>
+	  <property>/controls/switches/engine-start-flip</property>
+	  <value>1</value>
+	</binding>
       </item>
-      <item>
+       <item>
+	<name>Engine Start Switch</name>
+	<value>set NORMAL</value>
+	<condition>
+	  <and>
+	    <equals>
+	      <property>/controls/switches/engine-start</property>
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>/controls/switches/engine-start-flip</property>
+	      <value>1</value>
+	    </equals>
+	  </and>
+	</condition>
+	<marker>
+	  <x-m>3.8333</x-m>
+	  <y-m>0.4533</y-m>
+	  <z-m>0.6425</z-m>
+	  <scale>1.8833</scale>
+	</marker>
+	<binding>
+	  <command>property-toggle</command>
+	  <property>/controls/switches/engine-start</property>
+	  <value>1</value>
+	</binding>
+      </item>
+        <item>
 	<name>Left MFD Power Switch</name>
 	<value>switch ON</value>
 	<condition>
@@ -400,7 +432,6 @@
 	  <value>false</value>
 	</binding>
       </item>
-      <!--
       <item>
 	<name>Canopy Close</name>
 	<value>press Button, verify closed and locked</value>
@@ -418,10 +449,9 @@
 	</marker>
 	<binding>
 	  <command>nasal</command>
-	  <script>typhoon.canopy.toggle()</script>
+	  <script>typhoon.canopy.toggle();</script>
 	</binding>
       </item>
-      -->
       <item><!-- error: faulty -->
 	<name>ECS Switch</name>
 	<value>set ON</value>
@@ -438,6 +468,7 @@
 	  <scale>1.6000</scale>
 	</marker>
 	<binding>
+	  <command>property-assign</command>
 	  <property>/controls/switches/windshield</property>
 	  <value>1</value>
 	</binding>
@@ -446,7 +477,7 @@
 	<name>Ejection Seat</name>
 	<value>arm</value>
 	<condition>
-	<equals>
+	  <equals>
 	  <property>/controls/seat/arming-handle</property>
 	  <value>1.0</value>
 	</equals>
@@ -458,6 +489,7 @@
 	  <scale>23.6000</scale>
 	</marker>
 	<binding>
+ 	  <command>property-assign</command>
 	  <property>/controls/seat/arming-handle</property>
 	  <value>1.0</value>
 	</binding>

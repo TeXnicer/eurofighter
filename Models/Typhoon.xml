@@ -92,6 +92,11 @@
 	<model>
 		<path>Aircraft/eurofighter/Models/Effects/effects.xml</path>
 	</model>
+
+	<!-- Added by D-EKSW for checklist/tutorial improvement -->
+	<model>
+          <path>Aircraft/Generic/marker.xml</path>
+	</model>	
   
   <!-- Drag Chute
 	<model>
