@@ -45,7 +45,17 @@
 	  <property>/controls/buttons/APU</property>
 	  <value>true</value>
 	</binding>
-       </item>
+ 	<binding>
+	  <command>property-assign</command>
+	  <property>/sim/gui/dialogs/radios/transponder-mode</property>
+	  <value>ON</value>
+	</binding>
+	<binding>
+	  <command>property-assign</command>
+	  <property>/sim/hud/current-color</property>
+	  <value>0</value>
+	</binding>
+        </item>
        <item>
 	 <name>Left Boost Pump Switch</name>
 	 <value>set ON</value>
@@ -61,7 +71,7 @@
 	  <z-m>0.6458</z-m>
 	  <scale>2.0667</scale>
 	</marker>
-	 <binding>
+6	 <binding>
 	   <command>property-assign</command>
 	   <property>/controls/switches/boost-pump-left</property>
 	   <value>true</value>
@@ -91,8 +101,22 @@
        <item>
 	 <name>LP Cock Left Cover</name>
 	 <value>uncover</value>
-	 <condition>
+	 <!--
+         <condition>
+	   <or>
 	   <equals>
+	     <property>/controls/switches/lp-cock-left-cover</property>
+	     <value>1</value>
+	   </equals>
+	   <equals>
+	     <property>/controls/switches/lp-cock-left-cover-wasflipped</property>
+	     <value>true</value>
+	   </equals>
+	   </or>
+	 </condition>
+	 -->
+	 <condition>
+	    <equals>
 	     <property>/controls/switches/lp-cock-left-cover</property>
 	     <value>1</value>
 	   </equals>
@@ -279,15 +303,37 @@
        </item>    
      </checklist>
      <checklist>
-      <title>Engine Startup</title>
+       <title>Engine Startup</title>
+       <item>
+	 <name>APU</name>
+	 <value>check power established</value>
+	 <condition>
+	   <and>
+	     <greater-than-equals>
+	       <property>/engines/engine[2]/rpm</property>
+	       <value>75</value>
+	     </greater-than-equals>
+	     <greater-than-equals>
+	       <property>/systems/electrical/outputs/FCS</property>
+	       <value>105</value>
+	     </greater-than-equals>
+	   </and>
+	 </condition>
+       </item>
        <item>
 	<name>Engine Start Switch</name>
-	<value>set ON</value>
+	<value>set ON, wait for CYCLE</value>
 	<condition>
-	    <equals>
-	      <property>/controls/switches/engine-start-flip</property>
-	      <value>1</value>
-	    </equals>
+	  <and>
+	    <greater-than-equals>
+	      <property>/engines/engine[0]/n1</property>
+	      <value>34</value>
+	    </greater-than-equals>
+	    <greater-than-equals>
+	      <property>/engines/engine[1]/n1</property>
+	      <value>34</value>
+	    </greater-than-equals>
+	  </and>
 	</condition>
 	<marker>
 	  <x-m>3.8333</x-m>
@@ -298,11 +344,6 @@
 	<binding>
 	  <command>nasal</command>
 	  <script>avionics.controls.engineStart(1);</script>
-	</binding>
-	<binding>
-	  <command>property-assign</command>
-	  <property>/controls/switches/engine-start-flip</property>
-	  <value>1</value>
 	</binding>
       </item>
  
@@ -422,7 +463,7 @@
 	</marker>
 	<binding>
 	  <command>nasal</command>
-	  <script>typhoon.canopy.toggle();</script>
+	  <script>typhoon.canopy.toggle();typhoon.canopy.toggle();typhoon.canopy.toggle();</script>
 	</binding>
       </item>
       <item><!-- error: faulty -->
@@ -446,7 +487,118 @@
 	  <value>1</value>
 	</binding>
       </item>
-      <item><!-- error: faulty -->
+     </checklist>
+     <checklist>
+       <title>After Engine Start-Up</title>
+       <item>
+	 <name>Voice System</name>
+	 <value>set power ON</value>
+	 <condition>
+	   <equals>
+	     <property>/controls/switches/voice</property>
+	     <value>true</value>
+	   </equals>
+	 </condition>
+	 <binding>
+	   <command>property-assign</command>
+	     <property>/controls/switches/voice</property>
+	     <value>true</value>
+	 </binding>
+       </item>
+         <item>
+	 <name>RAD-1</name>
+	 <value>set power ON</value>
+	 <condition>
+	   <equals>
+	     <property>/controls/switches/rad-1-power</property>
+	     <value>true</value>
+	   </equals>
+	 </condition>
+	 <binding>
+	   <command>property-assign</command>
+	     <property>/controls/switches/rad-1-power</property>
+	     <value>true</value>
+	 </binding>
+       </item>
+         <item>
+	 <name>RAD-2</name>
+	 <value>set power ON</value>
+	 <condition>
+	   <equals>
+	     <property>/controls/switches/rad-2-power</property>
+	     <value>true</value>
+	   </equals>
+	 </condition>
+	 <binding>
+	   <command>property-assign</command>
+	     <property>/controls/switches/rad-2-power</property>
+	     <value>true</value>
+	 </binding>
+       </item>
+       <item>
+	 <name>MIDS</name>
+	 <value>set power ON</value>
+	 <condition>
+	   <equals>
+	     <property>/controls/switches/MIDS-power</property>
+	     <value>true</value>
+	   </equals>
+	 </condition>
+	 <binding>
+	   <command>property-assign</command>
+	     <property>/controls/switches/MIDS-power</property>
+	     <value>true</value>
+	 </binding>
+       </item>
+         <item>
+	 <name>COM-1</name>
+	 <value>set power ON</value>
+	 <condition>
+	   <equals>
+	     <property>/controls/switches/com1-power</property>
+	     <value>true</value>
+	   </equals>
+	 </condition>
+	 <binding>
+	   <command>property-assign</command>
+	     <property>/controls/switches/com1-power</property>
+	     <value>true</value>
+	 </binding>
+       </item>
+        <item>
+	 <name>Cabin Temperature</name>
+	 <value>set AS CONVINIENT</value>
+	 <condition>
+	   <greater-than-equals>
+	     <property>/controls/rotary/cabin-temp</property>
+	     <value>0.15</value>
+	   </greater-than-equals>
+	 </condition>
+	 <binding>
+	   <command>property-assign</command>
+	     <property>/controls/rotary/cabin-temp</property>
+	     <value>0.75</value>
+	 </binding>
+       </item>
+        <item>
+	 <name>Cabin Air Flow</name>
+	 <value>set AS CONVINIENT</value>
+	 <condition>
+	   <greater-than-equals>
+	     <property>/controls/rotary/cabin-flow</property>
+	     <value>0.1</value>
+	   </greater-than-equals>
+	 </condition>
+	 <binding>
+	   <command>property-assign</command>
+	     <property>/controls/rotary/cabin-flow</property>
+	     <value>0.9</value>
+	 </binding>
+       </item>
+    </checklist>
+         <checklist>
+      <title>Taxi</title>
+      <item>
 	<name>Ejection Seat</name>
 	<value>arm</value>
 	<condition>
@@ -466,8 +618,8 @@
 	  <property>/controls/seat/arming-handle</property>
 	  <value>1.0</value>
 	</binding>
-      </item>
-     </checklist>
+	  </item>
+    </checklist>
    </group>
  </PropertyList>
  
